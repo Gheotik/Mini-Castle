@@ -1,4 +1,4 @@
-package miniCastle.dao;
+package miniCastle.repository;
 
 public class CharacterRepository {
 
