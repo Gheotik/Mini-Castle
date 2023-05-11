@@ -1,18 +1,16 @@
 package miniCastle.dao;
 
 public class MonsterCard implements ICard {
-	private int id;
+	private int monsterId;
 	private String description;
 	private int scoreValue;
 	private String cardImagePath;
-	private int monsterId;
 	private int damage;
 	private int hp;
 	private int xpReward;
 
 		
-	public MonsterCard(int id, String description, int scoreValue, String cardImagePath, int monsterId, int damage, int hp, int xpReward) {
-		this.id = id;
+	public MonsterCard(int monsterId, String description, int scoreValue, String cardImagePath, int damage, int hp, int xpReward) {
 		this.description = description;
 		this.scoreValue = scoreValue;
 		this.cardImagePath = cardImagePath;
@@ -61,6 +59,13 @@ public class MonsterCard implements ICard {
 
 	public int getXpReward() {
 		return xpReward;
+	}
+
+	@Override
+	public String toString() {
+		return "MonsterCard [monsterId=" + monsterId + ", description=" + description + ", scoreValue=" + scoreValue
+				+ ", cardImagePath=" + cardImagePath + ", damage=" + damage + ", hp=" + hp + ", xpReward=" + xpReward
+				+ "]";
 	}
 
 

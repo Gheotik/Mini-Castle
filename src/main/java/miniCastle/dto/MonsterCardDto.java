@@ -9,7 +9,7 @@ public class MonsterCardDto {
 	private int hp;
 	private int xpReward;
 	
-	public MonsterCardDto(String description, int scoreValue, String cardImagePath, int monsterId, int damage, int hp, int xpReward) {
+	public MonsterCardDto(int monsterId, String description, int scoreValue, String cardImagePath, int damage, int hp, int xpReward) {
 		this.description = description;
 		this.scoreValue = scoreValue;
 		this.cardImagePath = cardImagePath;
