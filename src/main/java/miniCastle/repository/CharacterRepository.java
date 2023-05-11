@@ -1,5 +1,9 @@
 package miniCastle.repository;
 
+<<<<<<< HEAD
+public class CharacterRepository {
+
+=======
 import miniCastle.dao.Character;
 
 public class CharacterRepository {
@@ -22,4 +26,5 @@ public class CharacterRepository {
 	public void delete(Character character) {
 		
 	}
+>>>>>>> 09b30f4bb443020f9011c861da31a4d83276215a
 }
