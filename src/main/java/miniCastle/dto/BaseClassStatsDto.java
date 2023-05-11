@@ -12,14 +12,26 @@ public class BaseClassStatsDto {
 	
 	private int baseArmor;
 
+	private String charImagePath;
 	
-	public BaseClassStatsDto(int baseHp, int baseDamage, String name, int skill, int baseArmor) {
+	
+	public BaseClassStatsDto(int baseHp, int baseDamage, String name, int skill, int baseArmor, String charImagePath) {
 		super();
 		this.baseHp = baseHp;
 		this.baseDamage = baseDamage;
 		this.name = name;
 		this.skill = skill;
 		this.baseArmor = baseArmor;
+		this.charImagePath = charImagePath;
+	}
+
+	public String getCharImagePath() {
+		return charImagePath;
+	}
+
+
+	public void setCharImagePath(String charImagePath) {
+		this.charImagePath = charImagePath;
 	}
 
 

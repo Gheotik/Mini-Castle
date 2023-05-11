@@ -3,6 +3,7 @@ package miniCastle.services;
 import miniCastle.repository.BaseClassStatsRepository;
 import miniCastle.dto.BaseClassStatsDto;
 import miniCastle.dao.BaseClassStats;
+import miniCastle.dao.Gear;
 
 public class BaseClassStatsService {
 	
@@ -11,7 +12,14 @@ public class BaseClassStatsService {
 	public void createBaseClassStats(BaseClassStatsDto baseClassStatsDto) {
 		// TODO Auto-generated method stub
 		
-		BaseClassStats baseClassStats = new BaseClassStats(15, 10, baseClassStatsDto.getName(), 20, 25, null);
+		BaseClassStats baseClassStats = new BaseClassStats(
+				baseClassStatsDto.getBaseHp(),
+				baseClassStatsDto.getBaseDamage(),
+				baseClassStatsDto.getName(),
+				baseClassStatsDto.getSkill(),
+				baseClassStatsDto.getBaseArmor(),
+				baseClassStatsDto.getCharImagePath()
+				);
 		
 		repository.insert(baseClassStats);
 	}
