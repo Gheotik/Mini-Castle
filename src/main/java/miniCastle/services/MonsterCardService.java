@@ -11,4 +11,37 @@ public class MonsterCardService {
 	public MonsterCard readMonsterCard(MonsterCardDto monsterCardDto) {
 		return repository.findById(monsterCardDto.getMonsterId());
 	}
+	
+	public void update(MonsterCardDto monsterCardDto)
+	{
+		MonsterCard monsterCard = new MonsterCard(
+				monsterCardDto.getMonsterId(),
+				monsterCardDto.getDescription(),
+				monsterCardDto.getScoreValue(),
+				monsterCardDto.getCardImagePath(),
+				monsterCardDto.getDamage(),
+				monsterCardDto.getHp(),
+				monsterCardDto.getXpReward()
+		);
+		this.repository.update(monsterCard);
+	}
+	
+	public void insert(MonsterCardDto monsterCardDto)
+	{
+		MonsterCard monsterCard = new MonsterCard(
+				monsterCardDto.getMonsterId(),
+				monsterCardDto.getDescription(),
+				monsterCardDto.getScoreValue(),
+				monsterCardDto.getCardImagePath(),
+				monsterCardDto.getDamage(),
+				monsterCardDto.getHp(),
+				monsterCardDto.getXpReward()
+		);
+		this.repository.insert(monsterCard);	
+	}
+	
+	public void delete(MonsterCardDto monsterCardDto)
+	{
+		this.repository.delete(monsterCardDto.getMonsterId());
+	}
 }

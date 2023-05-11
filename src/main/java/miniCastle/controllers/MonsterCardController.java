@@ -11,6 +11,21 @@ public class MonsterCardController {
 		return service.readMonsterCard(monsterCardDto);
 	}
 	
+	public void update(MonsterCardDto monsterCardDto)
+	{
+		service.update(monsterCardDto);
+	}
+	
+	public void insert(MonsterCardDto monsterCardDto)
+	{
+		service.insert(monsterCardDto);
+	}
+	
+	public void delete(MonsterCardDto monsterCardDto)
+	{
+		service.delete(monsterCardDto);
+	}
+	
 	public void run() {
 		// TODO Auto-generated method stub
 	}
