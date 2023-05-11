@@ -8,5 +8,5 @@ public class InventoryController {
 	
 	private InventoryService service = new InventoryService();
 	
-	
+	//TODO read
 }

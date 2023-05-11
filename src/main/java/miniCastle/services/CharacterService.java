@@ -2,8 +2,6 @@ package miniCastle.services;
 
 import miniCastle.repository.CharacterRepository;
 import miniCastle.dto.CharacterDto;
-import miniCastle.dao.Character;
-import miniCastle.dao.Gear;
 
 public class CharacterService {
 	

@@ -1,6 +1,5 @@
 package miniCastle.controllers;
 
-import miniCastle.dto.BaseClassStatsDto;
 import miniCastle.dto.GearDto;
 import miniCastle.services.GearService;
 

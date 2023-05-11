@@ -9,7 +9,7 @@ public class Loot {
 	
 	public Loot(int lootId, int coin) {
 		this.lootId = lootId;
-		this.gearList = new ArrayList<>();
+		this.gearList = new ArrayList<Gear>();
 		this.coin = coin;
 	}
 

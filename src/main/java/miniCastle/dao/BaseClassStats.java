@@ -31,6 +31,16 @@ public class BaseClassStats {
 	}
 
 
+	public String getCharImagePath() {
+		return charImagePath;
+	}
+
+
+	public void setCharImagePath(String charImagePath) {
+		this.charImagePath = charImagePath;
+	}
+
+
 	public int getBaseHp() {
 		return baseHp;
 	}

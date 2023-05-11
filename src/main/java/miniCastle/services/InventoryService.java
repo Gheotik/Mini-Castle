@@ -8,6 +8,6 @@ public class InventoryService {
 	
 	private InventoryRepository repository = new InventoryRepository();
 
-	
+	//TODO read Inventory
 	
 }

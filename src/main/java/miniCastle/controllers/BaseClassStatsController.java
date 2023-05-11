@@ -1,7 +1,6 @@
 package miniCastle.controllers;
 
 import miniCastle.dto.BaseClassStatsDto;
-import miniCastle.dto.BaseClassStatsDto;
 import miniCastle.services.BaseClassStatsService;
 
 public class BaseClassStatsController {

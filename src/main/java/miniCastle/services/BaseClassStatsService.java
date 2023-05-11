@@ -3,7 +3,6 @@ package miniCastle.services;
 import miniCastle.repository.BaseClassStatsRepository;
 import miniCastle.dto.BaseClassStatsDto;
 import miniCastle.dao.BaseClassStats;
-import miniCastle.dao.Gear;
 
 public class BaseClassStatsService {
 	
