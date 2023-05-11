@@ -1,6 +1,6 @@
 package miniCastle.dao;
 
-public class TrapCard {
+public class TrapCard implements ICard {
 	private int trapId;
 	private String description;
 	private int scoreValue;
