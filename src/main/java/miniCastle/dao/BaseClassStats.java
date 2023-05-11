@@ -12,19 +12,22 @@ public class BaseClassStats {
 	
 	private int baseArmor;
 	
+	private String charImagePath;
+	
 
 	public BaseClassStats() {
 		super();
 	}
 
 	
-	public BaseClassStats(int baseHp, int baseDamage, String name, int skill, int baseArmor) {
+	public BaseClassStats(int baseHp, int baseDamage, String name, int skill, int baseArmor, String charImagePath) {
 		super();
 		this.baseHp = baseHp;
 		this.baseDamage = baseDamage;
 		this.name = name;
 		this.skill = skill;
 		this.baseArmor = baseArmor;
+		this.charImagePath = charImagePath;
 	}
 
 

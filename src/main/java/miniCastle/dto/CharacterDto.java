@@ -2,6 +2,8 @@ package miniCastle.dto;
 
 public class CharacterDto {
 	
+	private int id;
+	
 	private String name;
 	
 	private int armor;
@@ -26,6 +28,11 @@ public class CharacterDto {
 	}
 
 	
+	public int getId() {
+		return id;
+	}
+
+
 	public String getName() {
 		return name;
 	}

@@ -4,8 +4,6 @@ public class Character {
 	
 	private int id;
 	
-	private String charImagePath;
-	
 	private String name;
 	
 	private int armor;
@@ -21,6 +19,8 @@ public class Character {
 	private BaseClassStats baseClassStats;
 	
 	private Inventory inventory;
+
+	private String charImagePath;
 	
 	
 	public Character() {

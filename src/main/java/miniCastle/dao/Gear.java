@@ -8,17 +8,20 @@ public class Gear {
 	
 	private int armor;
 	
+	private int price;
+	
 	
 	public Gear() {
 		super();
 	}
 
 
-	public Gear(int gearSlotId, int damage, int armor) {
+	public Gear(int gearSlotId, int damage, int armor, int price) {
 		super();
 		this.gearSlotId = gearSlotId;
 		this.damage = damage;
 		this.armor = armor;
+		this.price = price;
 	}
 	
 
@@ -44,5 +47,16 @@ public class Gear {
 	public void setArmor(int armor) {
 		this.armor = armor;
 	}
+
+
+	public int getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
 	
 }
