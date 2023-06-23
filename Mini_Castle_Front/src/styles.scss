@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.row{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.container{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+}

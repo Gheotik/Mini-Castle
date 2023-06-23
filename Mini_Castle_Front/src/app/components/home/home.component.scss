@@ -1,0 +1,52 @@
+ul{
+    list-style-type: none;
+    text-align: center;
+
+}
+
+li{
+    padding-bottom: 5%;
+    margin-right: 10%;
+}
+
+a{
+    text-decoration: none;
+    color : #525151;
+    font-weight: bolder;
+    font-size: large;
+}
+
+#Connection{
+    padding-top: 5%;
+    background-color: #E7E7E7;
+    justify-content: center;
+    height: 30%;
+    border-radius: 25px 25px 0px 0px;
+    margin-top: 5%;
+}
+
+hr{
+    border-bottom: 1px solid #525151; 
+    width: 20%;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10%;
+}
+
+img{
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+#triangle {
+    fill: #E7E7E7;
+    stroke: #E7E7E7;
+    stroke-width: 60;
+    padding-left: 0 !important;
+    width: 100%;
+}
+
+svg{
+    width: 100%;
+}
+
