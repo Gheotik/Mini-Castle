@@ -1,0 +1,29 @@
+{
+    "Classes": [
+        { 
+            "id": "2",
+            "image": "assets/warrior.png",
+            "name": "Warrior",
+            "base_hp": 15,
+            "base_armor": 8,
+            "base_damage": 4,
+            "skill": "Slash"
+        }, {
+            "id": "2",
+            "image": "assets/ranger.png",
+            "name": "Ranger",
+            "base_hp": 10,
+            "base_armor": 5,
+            "base_damage": 6,
+            "skill": "Precise Shot"
+        }, {
+            "id": "3",
+            "image": "assets/mage.png",
+            "name": "mage",
+            "base_hp": 10,
+            "base_armor": 5,
+            "base_damage": 6,
+            "skill": "Fireball"
+        }
+    ]
+}
