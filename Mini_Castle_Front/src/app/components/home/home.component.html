@@ -2,21 +2,14 @@
     <div class='row .g-0'>
         <div id="Connection" class="col col-lg-4 offset-lg-4">
             <ul>
-                <li><img src="..\..\..\assets\Mini_catsle_blanc-01.png" alt="logo"></li>   
-                <ng-template *ngIf="this.token === 'new'; else contenu" >
+                <li><img src="..\..\..\assets\Mini_castle_blanc.png" alt="logo"></li>   
+                <ng-container>
                     <li><a href="">{{ field1 }}</a></li>
-                    <hr>
+                        <li><hr></li>
                     <li ><a href="">{{ field2 }}</a></li>
-                    <hr>
+                        <li><hr></li>
                     <li><a href="">{{ field3 }}</a></li>
-                </ng-template>
-                <ng-template #contenu>
-                    <li><a href="">{{ field1 }}</a></li>
-                    <hr>
-                    <li><a href="">{{ field2 }}</a></li>
-                    <hr>
-                    <li><a href=""> {{ field3 }}</a></li>
-                </ng-template>
+                </ng-container>
             </ul>     
         </div>     
     </div>

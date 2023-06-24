@@ -8,10 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeComponent implements OnInit {
 
-  token: string | undefined ;
+  token: string | null | undefined ;
  
   ngOnInit(): void {
-    this.token = 'cola';
     this.tokenUser();
   }
 
@@ -21,14 +20,14 @@ export class HomeComponent implements OnInit {
   field3 : string | undefined;
 
   tokenUser(){
-    
-    if(this.token === 'cola'){
-      this.field1 = 'Inscription';
-      this.field2 = 'Connexion';
-      this.field3 = 'Quit';
-    } else {
+    this.token = 'j';
+    if(this.token != null){
       this.field1 = 'New Game';
       this.field2 = 'Load Game';
+      this.field3 = 'Quit';
+    } else {
+      this.field1 = 'Register';
+      this.field2 = 'Connection';
       this.field3 = 'Quit';
     }
 
