@@ -20,14 +20,13 @@ export class HomeComponent implements OnInit {
   field3 : string | undefined;
 
   tokenUser(){
-    this.token = 'j';
     if(this.token != null){
       this.field1 = 'New Game';
       this.field2 = 'Load Game';
       this.field3 = 'Quit';
     } else {
-      this.field1 = 'Register';
-      this.field2 = 'Connection';
+      this.field1 = 'Inscription';
+      this.field2 = 'Connexion';
       this.field3 = 'Quit';
     }
 

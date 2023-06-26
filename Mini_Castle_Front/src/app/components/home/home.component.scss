@@ -1,54 +1,118 @@
+// #region @MediaScreen
+// Using for the SVG & font responsivity 
+@media (width > 1600px) {
+    #triangle {
+        width: 102.8%;
+    }
+    a{font-size: 28px;}
+  }
+
+  @media (width > 1400px) {
+    #triangle {
+        width: 103%;
+    }
+    a{font-size: 28px;}
+  }
+@media (width < 1400px) {
+    #triangle {
+        width: 104%;
+    }
+    a{font-size: 20px;}
+  }
+@media (width < 1000px) {
+    #triangle {
+        width: 105.5%;
+    }
+    ul{ margin-left: -10%;}
+  }
+@media (width < 800px) {
+    #triangle {
+        width: 107%;
+    }
+  }
+@media (width < 500px) {
+    #triangle { width: 108% ;}
+    a{font-size: 15px;}
+    ul{ margin-left: -10%;}
+  }
+// #endregion
+
 ul{
     list-style-type: none;
     text-align: center;
     justify-content: center;
+    margin-bottom: 5%;
+
 }
 
 li{
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     margin-right: 10%;
     text-align: center;
 }
 
 a{
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color : #525151;
     font-weight: bolder;
-    font-size: large;
 }
 
 #Connection{
-    padding-top: 5%;
+    padding-top: 2%;
     background-color: #E7E7E7;
     justify-content: center;
-    height: 30%;
+    height: 50%;
     border-radius: 25px 25px 0px 0px;
     margin-top: 5%;
+    padding-top: 5%;
 }
 
 hr{
-    border: 2px solid #525151; 
-    // margin: 0rem 0px 0rem 0px !important;
-    size: 50px;
+    border: 1px solid #525151; 
     width: 30%;
     margin-left: 35%;
 }
 
-img{
+#logo{
     margin-left: 5%;
-    width: 80%;
+    width: 70%;
     padding-bottom: 15%;
 }
 
 #triangle {
-    fill: #E7E7E7;
-    stroke: #E7E7E7;
-    stroke-width: 60;
+    margin-top: -16%;
     padding-left: 0 !important;
-    width: 100%;
 }
 
-svg{
-    width: 100%;
+#svg{
+    padding-left: 0 !important;
 }
+
+#brick{
+    width:30%;
+    transform: translateX(480px);
+
+}
+
+
+
+// #triangle {
+//     fill: #E7E7E7;
+//     stroke: #E7E7E7;
+//     stroke-width: 60;
+//     padding-left: 0 !important;
+//     width: 100%;
+// }
+
+// svg{
+//     width: 100%;
+// }
+
+// @media screen and (max-width: 500px) {
+//     #triangle {
+//         width: 108%;
+//     }
+// }
+
 
