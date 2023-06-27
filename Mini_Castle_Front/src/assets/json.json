@@ -7,7 +7,11 @@
             "base_hp": 15,
             "base_armor": 8,
             "base_damage": 4,
-            "skill": "Slash"
+            "skill": [
+                {
+                    "name": "Going berserk",
+                    "description": "You sacrifice 2 hp to gain +2 damages for 2 turns"
+                }]
         }, {
             "id": "2",
             "image": "assets/ranger.png",
@@ -15,15 +19,23 @@
             "base_hp": 10,
             "base_armor": 5,
             "base_damage": 6,
-            "skill": "Precise Shot"
+            "skill": [
+                {
+                    "name": "Precise shot",
+                    "Description": "You focus yourself to fire a precise arrow dealing 2 times the base damage."
+                }]
         }, {
             "id": "3",
             "image": "assets/mage.png",
-            "name": "mage",
+            "name": "Mage",
             "base_hp": 10,
             "base_armor": 5,
             "base_damage": 6,
-            "skill": "Fireball"
+            "skill": [
+                {
+                    "name": "Fireball",
+                    "Description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame dealing 8 damages"
+                }]
         }
     ]
 }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Class } from 'src/app/entities/class';
+import { Skills } from 'src/app/entities/skills';
 import { ClassService } from 'src/app/services/class/class.service';
 
 @Component({
@@ -18,6 +19,7 @@ export class ClassCarouselComponent {
 trackByClasseId(classe: any): string {
   return classe.id;
 }
+
 clicked(){
   console.log('click')
 }
