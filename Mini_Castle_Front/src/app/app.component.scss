@@ -11,6 +11,7 @@ header{
 }
 mat-sidenav-container{
     background: none;
+    z-index: 5;
 }
 
 mat-list-item{
@@ -21,4 +22,8 @@ span{
     vertical-align: middle;
     padding-right: 10px;
     padding-bottom: 5px;
+}
+
+mat-sidenav-content{
+    z-index: 0;
 }
