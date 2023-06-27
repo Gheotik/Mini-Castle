@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 const routes: Routes = [
   {
@@ -10,11 +11,11 @@ const routes: Routes = [
   },
   {
     path:'Inscription',
-    component: NavbarComponent
+    component: HeaderComponent
   },
   {
     path:'Connexion',
-    component: NavbarComponent
+    component: HeaderComponent
   }
 ];
 
