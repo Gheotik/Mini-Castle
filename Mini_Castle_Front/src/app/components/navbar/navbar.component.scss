@@ -1,11 +1,10 @@
-nav{
-    text-align: center;
-    justify-content: center;
-    background-color: #E7E7E7;
-    height: 45px;
-}
-
-img{
-    margin-top: 5px;
-    width:40px;
+.sidenav{
+    background: black;
+    transition: all .5s ease;
+    position: fixed;
+    z-index:1 ;
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+    box-shadow: 0.063rem 1.25rem 0 blue($color: #000000);
 }
