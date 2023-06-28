@@ -12,16 +12,12 @@ const routes: Routes = [
   },
   {
     path:'Inscription',
-    component: HeaderComponent
+    component: RegistrationFormComponent
   },
   {
     path:'Connexion',
     component: HeaderComponent
 
-  },
-  {
-    path: 'register',
-    component: RegistrationFormComponent
   }
 ];
 
