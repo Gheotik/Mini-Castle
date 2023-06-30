@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-
+import { ClassCarouselComponent } from './components/class-carousel/class-carousel.component';
 
 const routes: Routes = [
   {
@@ -12,15 +12,16 @@ const routes: Routes = [
   },
   {
     path:'Inscription',
-    component: RegistrationFormComponent
+    component: HeaderComponent
   },
   {
     path:'Connexion',
     component: HeaderComponent
-import { ClassCarouselComponent } from './components/class-carousel/class-carousel.component';
-
-  }
-
+  },
+  {
+    path: 'register',
+    component: RegistrationFormComponent
+  },
   { path: 'classes', 
   component: ClassCarouselComponent },
 ];
