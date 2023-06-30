@@ -1,3 +1,5 @@
+import { Skills } from "./skills"
+
 export interface Class {
     id: string
     image: string
@@ -5,5 +7,5 @@ export interface Class {
     base_hp: number
     base_armor: number
     base_damage: number
-    skill: string
+    skill: Skills[]
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Class } from 'src/app/core/entities/class';
+import { Skills } from 'src/app/core/entities/skills';
 import { TableService } from 'src/app/shared/table/table.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { TableService } from 'src/app/shared/table/table.service';
 })
 export class TableComponent implements OnInit{
 
-  classes: Class[] = [];
+classes: Class[] = [];
+skills: Skills[] = [];
 
 constructor(private classService: TableService) { }
 

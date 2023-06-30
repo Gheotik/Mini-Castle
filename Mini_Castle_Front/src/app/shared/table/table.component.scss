@@ -3,30 +3,35 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-  }
-  
-  /* CSS for the table header */
-  thead {
+}
+
+/* CSS for the table header */
+thead {
     background-color: #f5f5f5;
-    
-  }
-  
-  th {
+
+}
+
+tr {
+
+    padding: 20px;
+    text-align: center;
+
+}
+
+th {
     padding: 10px;
     text-align: center;
-  }
-    
-  
-  td {
+
+}
+
+
+td {
     padding: 10px;
-    text-align: center;
-  }
-  
-  /* CSS for the table image */
-  td img {
+    text-align: justify;
+}
+
+/* CSS for the table image */
+td img {
     max-width: 100px;
     max-height: 100px;
-  }
-  
-
-  
+}

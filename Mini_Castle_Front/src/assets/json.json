@@ -22,7 +22,7 @@
             "skill": [
                 {
                     "name": "Precise shot",
-                    "Description": "You focus yourself to fire a precise arrow dealing 2 times the base damage."
+                    "description": "You focus yourself to fire a precise arrow dealing 2 times the base damage."
                 }]
         }, {
             "id": "3",
@@ -34,7 +34,7 @@
             "skill": [
                 {
                     "name": "Fireball",
-                    "Description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame dealing 8 damages"
+                    "description": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame dealing 8 damages"
                 }]
         }
     ]
