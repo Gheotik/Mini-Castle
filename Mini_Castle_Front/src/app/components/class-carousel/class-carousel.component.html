@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-lg-4 offset-lg-4" style="background-color: burlywood">
+    <div class="row text-center">
+      <ngb-carousel [interval]="1000000">
+        <ng-template ngbSlide *ngFor="let class of classes$ | async">
+          <h2>{{class.name}}</h2>
+          <img [src]="class.image" style="width: 200px; padding-bottom: 220px ;"alt="Random slide"/>
+          <div class="carousel-caption" style="color: black">
+            <p>Health points : {{class.base_hp}}</p>
+            <p>Armor : {{class.base_armor}}</p>
+            <p>Damage : {{class.base_damage}}</p>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              placement="top"
+              ngbPopover="A really long skill description that will probably overflow. Detailling damage and things that are required to use the skill"
+              triggers="mouseenter:mouseleave"
+              popoverTitle= {{class.skill}}
+            > {{class.skill}} </button>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+</div>
