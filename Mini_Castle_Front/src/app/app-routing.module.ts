@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
-import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ClassCarouselComponent } from './components/class-carousel/class-carousel.component';
+import { RegistrationFormComponent } from './feature/registration-form/registration-form.component';
+import { HomeComponent } from './feature/home/home.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 
 const routes: Routes = [
   {

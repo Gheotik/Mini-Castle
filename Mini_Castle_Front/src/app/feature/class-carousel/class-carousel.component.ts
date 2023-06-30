@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Class } from 'src/app/entities/class';
-import { Skills } from 'src/app/entities/skills';
+import { Class } from 'src/app/core/entities/class';
+import { Skills } from 'src/app/core/entities/skills';
 import { ClassService } from 'src/app/services/class/class.service';
 
 @Component({
