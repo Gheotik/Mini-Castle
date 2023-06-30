@@ -25,7 +25,7 @@ import { ClassCarouselComponent } from './components/class-carousel/class-carous
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
     RegistrationFormComponent,
     HomeComponent,
     HeaderComponent,
