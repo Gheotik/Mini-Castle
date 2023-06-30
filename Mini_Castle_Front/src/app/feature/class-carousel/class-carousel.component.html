@@ -13,10 +13,10 @@
               type="button"
               class="btn btn-outline-secondary"
               placement="top"
-              ngbPopover="A really long skill description that will probably overflow. Detailling damage and things that are required to use the skill"
+              ngbPopover={{class.skill[0].description}}
               triggers="mouseenter:mouseleave"
-              popoverTitle= {{class.skill}}
-            > {{class.skill}} </button>
+              popoverTitle= {{class.skill[0].name}}
+            > {{class.skill[0].name}} </button>
           </div>
         </ng-template>
       </ngb-carousel>

@@ -16,15 +16,15 @@ export class ClassCarouselComponent {
   constructor(private classService: ClassService){
   }
 
-trackByClasseId(classe: any): string {
-  return classe.id;
-}
+  trackByClasseId(classe: any): string {
+    return classe.id;
+  }
 
-clicked(){
-  console.log('click')
-}
+  clicked(){
+    console.log('click')
+  }
 
-ngOnInit(): void{
-  this.classes$ = this.classService.getClass();
-}
+  ngOnInit(): void{
+    this.classes$ = this.classService.getClass();
+  }
 }
