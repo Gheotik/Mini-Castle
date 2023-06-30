@@ -19,8 +19,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import {MatCardModule} from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list'
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
+import { CardComponent } from './shared/card/card.component';
+import { TestComponent } from './feature/test/test.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.
     RegistrationFormComponent,
     HomeComponent,
     HeaderComponent,
-    ClassCarouselComponent
+    ClassCarouselComponent,
+    CardComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +51,9 @@ import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.
     MatMenuModule,
     MatDialogModule,
     MatSlideToggleModule,
-    NgbModule
+    NgbModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
