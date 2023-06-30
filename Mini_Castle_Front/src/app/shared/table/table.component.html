@@ -1,0 +1,25 @@
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Base HP</th>
+        <th>Base Armor</th>
+        <th>Base Damage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let classItem of classes">
+        <td>{{ classItem.id }}</td>
+        <td><img [src]="classItem.image" alt="{{ classItem.name }}" /></td>
+        <td>{{ classItem.name }}</td>
+        <td>{{ classItem.base_hp }}</td>
+        <td>{{ classItem.base_armor }}</td>
+        <td>{{ classItem.base_damage }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  

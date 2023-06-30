@@ -21,6 +21,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
+import { TableComponent } from './shared/table/table.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.
     RegistrationFormComponent,
     HomeComponent,
     HeaderComponent,
-    ClassCarouselComponent
+    ClassCarouselComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

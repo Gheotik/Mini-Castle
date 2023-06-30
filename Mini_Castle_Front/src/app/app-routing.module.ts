@@ -4,6 +4,7 @@ import { RegistrationFormComponent } from './feature/registration-form/registrat
 import { HomeComponent } from './feature/home/home.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
+import { TableComponent } from './shared/table/table.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,9 @@ const routes: Routes = [
   },
   { path: 'classes', 
   component: ClassCarouselComponent },
+  { path: 'table', 
+  component: TableComponent }
+
 ];
 
 @NgModule({
