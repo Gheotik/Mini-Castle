@@ -12,17 +12,13 @@ const routes: Routes = [
   },
   {
     path:'Inscription',
-    component: HeaderComponent
+    component: RegistrationFormComponent
   },
   {
     path:'Connexion',
     component: HeaderComponent
 import { ClassCarouselComponent } from './components/class-carousel/class-carousel.component';
 
-  },
-  {
-    path: 'register',
-    component: RegistrationFormComponent
   }
 
   { path: 'classes', 
