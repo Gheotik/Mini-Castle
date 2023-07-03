@@ -1,10 +1,9 @@
 mat-card {
     border-radius: 30px 30px 30px 30px  !important;
+    // height: 35vh !important;
   }
 
 .content {
-    // width: 10vw;
-    height: 100%;
     box-sizing: border-box;
     border-radius: 30px 30px 30px 30px  !important;
   }
@@ -32,18 +31,18 @@ mat-card {
   }
   
 img{
-    width: 80%;
-    margin-left: 10px;
+    width: 50%;
+    margin-left: 20%;
     margin-right: 10px;
 }
 
 mat-card-title {
-    font-size: 0.86vw;
+    font-size: 0.70vw;
     margin-bottom: 10%;
 }
 
 p{
-    font-size: 0.56vw;
+    font-size: 0.45vw;
 }
 
 mat-card-footer{

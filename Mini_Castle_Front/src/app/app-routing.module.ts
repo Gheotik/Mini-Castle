@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'test', 
   component: MapComponent
   },
+  { 
+    path: 'test2', 
+  component: TestComponent
+  },
 ];
 
 @NgModule({
