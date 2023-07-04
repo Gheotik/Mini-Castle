@@ -2,7 +2,6 @@
     display: flex;
   }
   
-  
   .right {
     flex: 1;
     display: flex;
@@ -11,12 +10,11 @@
     padding: 20px;
   }
   
-  
   .form-container {
     display: flex;
-    flex-direction: r;
+    flex-direction: column;
     align-items: flex-start;
-    width: 400px;
+    width: 450px;
     margin-right: 20px;
   }
   
@@ -25,11 +23,15 @@
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     width: 400px;
   }
   
-
+  .row {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
   
   input {
     width: 100%;
@@ -47,18 +49,6 @@
     cursor: pointer;
     border-radius: 4px;
     width: 100px;
+    float: right;
   }
-  
-
-  
-
-
-  
-
-  
-  
-  
-  
-  
-
   
