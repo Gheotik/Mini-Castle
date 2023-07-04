@@ -5,28 +5,38 @@ import { HomeComponent } from './feature/home/home.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { TableComponent } from './shared/table/table.component';
+import { FormulaireComponent } from './shared/formulaire/formulaire.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
-    path:'Inscription',
+    path: 'Inscription',
     component: RegistrationFormComponent
   },
   {
-    path:'Connexion',
+    path: 'Connexion',
     component: HeaderComponent
   },
   {
     path: 'register',
     component: RegistrationFormComponent
   },
-  { path: 'classes', 
-  component: ClassCarouselComponent },
-  { path: 'table', 
-  component: TableComponent }
+  {
+    path: 'classes',
+    component: ClassCarouselComponent
+  },
+  {
+    path: 'table',
+    component: TableComponent
+  },
+
+  {
+    path: 'formulaire',
+    component: FormulaireComponent
+  }
 
 ];
 

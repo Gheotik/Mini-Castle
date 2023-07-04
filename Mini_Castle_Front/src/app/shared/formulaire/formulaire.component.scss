@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+  }
+  
+  
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  
+  .form-container {
+    display: flex;
+    flex-direction: r;
+    align-items: flex-start;
+    width: 400px;
+    margin-right: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 400px;
+  }
+  
+
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #353131;
+    border-radius: 4px;
+  }
+  
+  button.btn-invoke {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100px;
+  }
+  
+
+  
+
+
+  
+
+  
+  
+  
+  
+  
+
+  

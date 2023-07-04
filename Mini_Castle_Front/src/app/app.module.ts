@@ -22,6 +22,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { TableComponent } from './shared/table/table.component';
+import { FormulaireComponent } from './shared/formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TableComponent } from './shared/table/table.component';
     HomeComponent,
     HeaderComponent,
     ClassCarouselComponent,
-    TableComponent
+    TableComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
