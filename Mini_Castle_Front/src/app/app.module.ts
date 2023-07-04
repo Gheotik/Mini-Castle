@@ -24,6 +24,8 @@ import { MatGridListModule } from '@angular/material/grid-list'
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { CardComponent } from './shared/card/card.component';
 import { TestComponent } from './feature/test/test.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TestComponent } from './feature/test/test.component';
     HeaderComponent,
     ClassCarouselComponent,
     CardComponent,
-    TestComponent
+    TestComponent,
+    NavbarComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,

@@ -6,18 +6,19 @@ import { HeaderComponent } from './layout/header/header.component';
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { TestComponent } from './feature/test/test.component';
 import { MapComponent } from './feature/map/map.component';
+import { BodyComponent } from './body/body.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:HomeComponent
+    component:BodyComponent
   },
   {
-    path:'Inscription',
+    path:'inscription',
     component: RegistrationFormComponent
   },
   {
-    path:'Connexion',
+    path:'connexion',
     component: HeaderComponent
   },
   {
@@ -29,12 +30,12 @@ const routes: Routes = [
   component: ClassCarouselComponent 
   },
   { 
-    path: 'test', 
-  component: MapComponent
+    path: 'home', 
+  component: HomeComponent
   },
   { 
-    path: 'test2', 
-  component: TestComponent
+    path: 'play', 
+  component: MapComponent
   },
 ];
 
