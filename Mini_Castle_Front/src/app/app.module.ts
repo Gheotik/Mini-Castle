@@ -19,10 +19,14 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatCardModule} from '@angular/material/card';
 
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { TableComponent } from './shared/table/table.component';
 import { FormulaireComponent } from './shared/formulaire/formulaire.component';
+import { CardHolderComponent } from './shared/card-holder/card-holder.component';
+import { CreationCardComponent } from './feature/creation-card/creation-card.component';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { FormulaireComponent } from './shared/formulaire/formulaire.component';
     HeaderComponent,
     ClassCarouselComponent,
     TableComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    CardHolderComponent,
+    CreationCardComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,8 @@ import { FormulaireComponent } from './shared/formulaire/formulaire.component';
     MatMenuModule,
     MatDialogModule,
     MatSlideToggleModule,
-    NgbModule
+    NgbModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
