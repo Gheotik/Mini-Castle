@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-holder.component.scss']
 })
 export class CardHolderComponent {
+damageValue: number | undefined;
 
 }

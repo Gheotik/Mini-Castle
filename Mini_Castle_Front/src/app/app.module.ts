@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,11 +20,10 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule} from '@angular/material/card';
 
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { TableComponent } from './shared/table/table.component';
-import { FormulaireComponent } from './shared/formulaire/formulaire.component';
 import { CardHolderComponent } from './shared/card-holder/card-holder.component';
 import { CreationCardComponent } from './feature/creation-card/creation-card.component';
 
@@ -37,7 +37,6 @@ import { CreationCardComponent } from './feature/creation-card/creation-card.com
     HeaderComponent,
     ClassCarouselComponent,
     TableComponent,
-    FormulaireComponent,
     CardHolderComponent,
     CreationCardComponent
   ],
@@ -57,7 +56,9 @@ import { CreationCardComponent } from './feature/creation-card/creation-card.com
     MatDialogModule,
     MatSlideToggleModule,
     NgbModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

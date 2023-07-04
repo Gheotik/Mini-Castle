@@ -5,8 +5,8 @@ import { HomeComponent } from './feature/home/home.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 import { TableComponent } from './shared/table/table.component';
-import { FormulaireComponent } from './shared/formulaire/formulaire.component';
 import { CreationCardComponent } from './feature/creation-card/creation-card.component';
+
 
 const routes: Routes = [
   {
