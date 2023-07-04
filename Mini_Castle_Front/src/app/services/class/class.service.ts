@@ -7,21 +7,15 @@ import { Classes } from 'src/app/core/entities/classes';
 @Injectable({
   providedIn: 'root'
 })
-export class ClassService {
-  json: string = "assets/json.json";
-  constructor(private httpClient: HttpClient) { }
-  getClass(): Observable<Class[]> {
-    
-    return this.httpClient.get<Classes>(this.json)
-    .pipe (
-      map((res: Classes) => res.Classes)
-    )
-  }
 
-  // getSkill(): Observable<Skills[]> {
-  //   return this.httpClient.get<Class>(this.json)
-  //   .pipe (
-  //     map((res:Class) => {return res.skill})
-  //   )
-  // }
+  export class ClassService {
+    url: string = "http://localhost:8080/api/class";
+    constructor(private httpClient: HttpClient) { }
+    getClass(): Observable<Class[]> {
+      
+      return this.httpClient.get<Class[]>(this.url)
+      .pipe (
+        map((res: Class[]) => res)
+      )
+    }
 }

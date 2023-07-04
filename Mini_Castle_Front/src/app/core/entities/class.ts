@@ -1,11 +1,10 @@
-import { Skills } from "./skills"
-
 export interface Class {
-    id: string
-    image: string
     name: string
     base_hp: number
     base_armor: number
     base_damage: number
-    skill: Skills[]
+    skill_name: string
+    skill_description: string
+    id: string
+    imagePath: string
 }

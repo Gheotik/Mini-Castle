@@ -26,5 +26,6 @@ export class ClassCarouselComponent {
 
   ngOnInit(): void{
     this.classes$ = this.classService.getClass();
+    console.log(this.classes$)
   }
 }
