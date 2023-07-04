@@ -4,35 +4,40 @@ import { RegistrationFormComponent } from './feature/registration-form/registrat
 import { HomeComponent } from './feature/home/home.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
-import { MapComponent } from './feature/map/map.component';
-import { BodyComponent } from './body/body.component';
-
 
 const routes: Routes = [
   {
-    path:'',
-    component:HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
-    path:'Inscription',
-  component: RegistrationFormComponent
+    path: 'Inscription',
+    component: RegistrationFormComponent
   },
   {
-    path:'Connexion',
+    path: 'Connexion',
     component: HeaderComponent
   },
   {
     path: 'Register',
     component: RegistrationFormComponent
   },
-  { 
-    path: 'classes', 
-    component: ClassCarouselComponent 
+  {
+    path: 'classes',
+    component: ClassCarouselComponent
   },
-  { 
-    path: 'play', 
-    component: MapComponent
+  {
+    path: 'table',
+    component: TableComponent
   },
+
+  {
+    path: 'creation-card',
+    component: CreationCardComponent
+  },
+
+
+
 ];
 
 @NgModule({

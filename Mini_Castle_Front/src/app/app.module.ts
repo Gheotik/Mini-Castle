@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,13 +20,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatCardModule} from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list'
+
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
-import { CardComponent } from './shared/card/card.component';
-import { TestComponent } from './feature/test/test.component';
-import { NavbarComponent } from './layout/navbar/navbar.component';
-import { BodyComponent } from './body/body.component';
+import { TableComponent } from './shared/table/table.component';
+import { CardHolderComponent } from './shared/card-holder/card-holder.component';
+import { CreationCardComponent } from './feature/creation-card/creation-card.component';
+
 
 @NgModule({
   declarations: [
@@ -35,10 +35,9 @@ import { BodyComponent } from './body/body.component';
     HomeComponent,
     HeaderComponent,
     ClassCarouselComponent,
-    CardComponent,
-    TestComponent,
-    NavbarComponent,
-    BodyComponent
+    TableComponent,
+    CardHolderComponent,
+    CreationCardComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +56,8 @@ import { BodyComponent } from './body/body.component';
     MatSlideToggleModule,
     NgbModule,
     MatCardModule,
-    MatGridListModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
