@@ -6,9 +6,9 @@
           <ng-template ngbSlide *ngFor="let class of classes$ | async">
             <h2>{{ class.name }}</h2>
             <img
-              [src]="class.image"
+            src="assets/{{class.imagePath}}"
               style="width: 200px; padding-bottom: 220px"
-              alt="Random slide"
+              alt="Random image"
             />
             <div class="carousel-caption" style="color: black">
               <p>Health points : {{ class.base_hp }}</p>
@@ -18,11 +18,11 @@
                 type="button"
                 class="btn btn-dark"
                 placement="top"
-                ngbPopover="{{ class.skill[0].description }}"
+                ngbPopover="{{ class.skill_description }}"
                 triggers="mouseenter:mouseleave"
-                popoverTitle="{{ class.skill[0].name }}"
+                popoverTitle="{{ class.skill_name }}"
               >
-                {{ class.skill[0].name }}
+                {{ class.skill_name  }}
               </button>
             </div>
           </ng-template>
