@@ -72,8 +72,8 @@ mat-card {
         border-radius: 0px 20px 0px 25px;
         padding: 15px 20px 15px 20px;
     }
-  }
-  
+  }  
+
 img{
     width: 5rem;
     margin-left: 25%;
@@ -97,3 +97,27 @@ mat-card-footer{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
+
+.card_back {
+    transition-delay: 0.3s;
+    background: #000214;
+    border: 5px solid #000214;
+    .hide {
+        transition-delay: 0.3s;
+        visibility: hidden;
+    }
+    
+
+}
+
+.card_front {
+    transition-delay: 0.20s;
+    background: white;
+    .hide{
+        transition-delay: 0.20s;
+    }
+}
+
+
