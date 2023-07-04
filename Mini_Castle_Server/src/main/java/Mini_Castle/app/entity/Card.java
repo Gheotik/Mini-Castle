@@ -1,4 +1,4 @@
-package Mini_Castle.demo.model.entity;
+package Mini_Castle.app.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
