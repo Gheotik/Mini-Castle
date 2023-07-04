@@ -19,6 +19,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HeaderComponent } from './layout/header/header.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.component';
 
@@ -46,7 +47,8 @@ import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.
     MatMenuModule,
     MatDialogModule,
     MatSlideToggleModule,
-    NgbModule
+    NgbModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
