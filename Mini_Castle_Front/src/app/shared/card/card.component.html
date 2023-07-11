@@ -1,33 +1,26 @@
-<div class="content">
-    <div class="box" (click)="toggleFlip()" [@flipState]="flip">
-        <mat-card class="template-card" [ngClass]=" (flip == 'active') ? 'card_back' : 'card_front'">
-            <div class="logo" *ngIf="(flip == 'active')">
-                
-            </div>
-            <div class="hide">
-                <div id="hp-damage" role="group">
-                    <span id="hp">25</span>
+<div class="template-card" (click)="toggleFlip()" [@flipState]="flip" [ngClass]=" (flip == 'active') ? 'card_back' : 'card_front'">
+    <div class="logo" *ngIf="(flip == 'active')">
+    </div>
+    <div class="hide">
+        <div id="hp-damage" role="group">
+            <span id="hp">25</span>
 
-                    <span id="damage">15</span>
-                </div>
-                <div [ngClass]="(flip == 'active') ? 'img-monster' : 'img-logo'">
-                        <img src="assets/placeholder.png">
-                </div>
-
-                <mat-card-header>
-                    <mat-card-title>Temp Magician</mat-card-title>
-                </mat-card-header>
-
-                <mat-card-content>
-                    <p>
-                        Jason has a Chemistry ph.D but dont find a job... So,got this temp job ! Let the magic begins !
-                    </p>
-                </mat-card-content>
-
-                <mat-card-footer>
-                    <span class="material-symbols-outlined" style="color: #931621;">skull</span>
-                </mat-card-footer>
+            <span id="damage">15</span>
         </div>
-        </mat-card>
+
+        <div [ngClass]="(flip == 'active') ? 'img-monster' : ''">
+            <img src="assets/placeholder.png">
+        </div>
+
+        <div id="description">
+            <h5>Temp Magician</h5>
+            <p>
+                Jason has a Chemistry ph.D but dont find a job... So,got this temp job ! Let the magic begins !
+            </p>
+            <span class="material-symbols-outlined" style="color: #931621;">skull</span>
+        </div>
+
+        
     </div>
 </div>
+

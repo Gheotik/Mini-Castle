@@ -9,7 +9,7 @@ import { delay } from 'rxjs';
   animations: [
     trigger('flipState', [
       state('active', style({
-        transform: 'rotateY(179deg)'
+        transform: 'rotateY(180deg)'
       })),
       state('inactive', style({
         transform: 'rotateY(0)'
@@ -29,6 +29,5 @@ export class CardComponent {
 
   toggleFlip() {
     this.flip = (this.flip == 'inactive') ? 'active' : 'inactive'
-    // delay(1000)
   }
 }
