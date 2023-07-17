@@ -1,49 +1,55 @@
 package miniCastle.dto;
 
-import miniCastle.dao.Loot;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "treasure_card_Dto")
 
 public class TreasureCardDto {
+	@Column(name = "card_id")
+	private int cardId;
+
+	@Column(name = "loot_id")
+	private int lootId;
+
+	@Column(name = "treasure_id")
 	private int treasureId;
-	private String description;
-	private int scoreValue;
-	private String cardImagePath;
-	private Loot loot;
-	
-	
-	public TreasureCardDto(int treasureId, String description, int scoreValue, String cardImagePath, Loot loot) {
-		this.treasureId = treasureId;
-		this.description = description;
-		this.scoreValue = scoreValue;
-		this.cardImagePath = cardImagePath;
-		this.loot = loot;
-	}
-	
-	
-	public String getDescription() {
-		return this.description;
+
+	public TreasureCardDto() {
+    }
+
+	public TreasureCardDto(int cardId, int lootId, int treasureId) {
+        this.cardId = cardId;
+        this.lootId = lootId;
+        this.treasureId = treasureId;
+    }
+
+	public int getCardId() {
+		return cardId;
 	}
 
-	public int getScoreValue() {
-		return this.scoreValue;
+	public void setCardId(int cardId) {
+		this.cardId = cardId;
 	}
 
-	public void setScoreValue(int score) {
-		this.scoreValue = score;
+	public int getLootId() {
+		return lootId;
 	}
 
-	public String getCardImagePath() {
-		return this.cardImagePath;
-	}
-	
-	public Loot getLoot() {
-		return this.loot;
-	}
-
-	public void setLoot(Loot loot) {
-		this.loot = loot;
+	public void setLootId(int lootId) {
+		this.lootId = lootId;
 	}
 
 	public int getTreasureId() {
 		return treasureId;
 	}
+
+	public void setTreasureId(int treasureId) {
+		this.treasureId = treasureId;
+	}
+
+	
 }

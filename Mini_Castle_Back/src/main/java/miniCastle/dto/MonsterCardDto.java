@@ -1,40 +1,56 @@
 package miniCastle.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "monster_card_Dto")
+
 public class MonsterCardDto {
-	private String description;
-	private int scoreValue;
-	private String cardImagePath;
+	@Column(name = "card_id")
+	private int cardId;
+
+	@Column(name = "monster_id")
 	private int monsterId;
+
+	@Column(name = "damage")
 	private int damage;
+
+	@Column(name = "hp")
 	private int hp;
+
+	@Column(name = "xp_reward")
 	private int xpReward;
-	
-	public MonsterCardDto(int monsterId, String description, int scoreValue, String cardImagePath, int damage, int hp, int xpReward) {
-		this.description = description;
-		this.scoreValue = scoreValue;
-		this.cardImagePath = cardImagePath;
+
+	public MonsterCardDto() {
+	}
+
+	public MonsterCardDto(int cardId, int monsterId, int damage, int hp, int xpReward) {
+		this.cardId = cardId;
 		this.monsterId = monsterId;
 		this.damage = damage;
 		this.hp = hp;
 		this.xpReward = xpReward;
 	}
-	
-	public String getDescription() {
-		return this.description;
+
+	public int getCardId() {
+		return cardId;
 	}
 
-	public int getScoreValue() {
-		return this.scoreValue;
+	public void setCardId(int cardId) {
+		this.cardId = cardId;
 	}
 
-	public void setScoreValue(int score) {
-		this.scoreValue = score;
+	public int getMonsterId() {
+		return monsterId;
 	}
 
-	public String getCardImagePath() {
-		return this.cardImagePath;
+	public void setMonsterId(int monsterId) {
+		this.monsterId = monsterId;
 	}
-	
+
 	public int getDamage() {
 		return damage;
 	}
@@ -51,11 +67,14 @@ public class MonsterCardDto {
 		this.hp = hp;
 	}
 
-	public int getMonsterId() {
-		return monsterId;
-	}
-
 	public int getXpReward() {
 		return xpReward;
 	}
+
+	public void setXpReward(int xpReward) {
+		this.xpReward = xpReward;
+	}
+
+	
+
 }

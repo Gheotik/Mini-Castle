@@ -1,20 +1,19 @@
 package miniCastle.dto;
 
 public class BaseClassStatsDto {
-	
+
 	private int baseHp;
-	
+
 	private int baseDamage;
-	
+
 	private String name;
-	
+
 	private int skill;
-	
+
 	private int baseArmor;
 
 	private String charImagePath;
-	
-	
+
 	public BaseClassStatsDto(int baseHp, int baseDamage, String name, int skill, int baseArmor, String charImagePath) {
 		super();
 		this.baseHp = baseHp;
@@ -29,60 +28,48 @@ public class BaseClassStatsDto {
 		return charImagePath;
 	}
 
-
 	public void setCharImagePath(String charImagePath) {
 		this.charImagePath = charImagePath;
 	}
-
 
 	public int getBaseHp() {
 		return baseHp;
 	}
 
-
 	public void setBaseHp(int baseHp) {
 		this.baseHp = baseHp;
 	}
-
 
 	public int getBaseDamage() {
 		return baseDamage;
 	}
 
-
 	public void setBaseDamage(int baseDamage) {
 		this.baseDamage = baseDamage;
 	}
-
 
 	public String getName() {
 		return name;
 	}
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 	public int getSkill() {
 		return skill;
 	}
 
-
 	public void setSkill(int skill) {
 		this.skill = skill;
 	}
-
 
 	public int getBaseArmor() {
 		return baseArmor;
 	}
 
-
 	public void setBaseArmor(int baseArmor) {
 		this.baseArmor = baseArmor;
 	}
-	
-	
+
 }
