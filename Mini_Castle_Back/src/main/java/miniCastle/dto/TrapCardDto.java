@@ -18,14 +18,18 @@ public class TrapCardDto {
 
 	@Column(name = "skill_check")
 	private int skillCheck;
+	
+	@Column(name = "damage")
+	private int damage;
 
 	public TrapCardDto() {
     }
 
-	public TrapCardDto(int cardId, int trapId, int skillCheck) {
+	public TrapCardDto(int cardId, int trapId, int skillCheck,int damage) {
         this.cardId = cardId;
         this.trapId = trapId;
         this.skillCheck = skillCheck;
+        this.damage=damage;
     }
 
 	public int getCardId() {
@@ -50,6 +54,14 @@ public class TrapCardDto {
 
 	public void setSkillCheck(int skillCheck) {
 		this.skillCheck = skillCheck;
+	}
+
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
 	}
 
 		
