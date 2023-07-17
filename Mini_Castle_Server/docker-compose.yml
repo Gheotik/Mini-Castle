@@ -4,11 +4,11 @@ services:
     postgres-compose:
       image: postgres
       environment:
-        POSTGRES_PASSWORD: "root"
+        POSTGRES_PASSWORD: "T*WCHEhUny7ZE#nG4LQv4*ZLdPH#EoZcR9LxzVSHpyUedJitmDkXA^h@tQ#gsJWFnRJdzuc&kXT^G3LxJ!mrk4vBexHDyd#oxzxhCg8KpJpt8yY5gH^tWpzWJh2#sq3y"
       ports:
         - "15432:5432"
       volumes:
-        - /home/container/development/Docker-Compose/PostgreSQL:/var/lib/postgresql/data
+        - miniCastleBDD:/var/lib/postgresql/data
       networks:
         - postgres-compose-network
 
@@ -16,7 +16,7 @@ services:
       image: dpage/pgadmin4
       environment:
         PGADMIN_DEFAULT_EMAIL: "email@gmail.com"
-        PGADMIN_DEFAULT_PASSWORD: "root"
+        PGADMIN_DEFAULT_PASSWORD: "rVrP6kucvgm%JPMkDoYSfvB3tPXUgP4^DMwZY6K3r@VgD!ot7spH8hhUH@jpWMGxx#CnTe794Vt%2apfRxm8bo4o^Wc!U&uTUtKGC!cKwekrtFFQWj&jpc7dG6!CCxLt"
       ports:
         - "16543:80"
       depends_on:
@@ -27,3 +27,6 @@ services:
 networks:
     postgres-compose-network:
       driver: bridge
+
+volumes:
+  miniCastleBDD:
