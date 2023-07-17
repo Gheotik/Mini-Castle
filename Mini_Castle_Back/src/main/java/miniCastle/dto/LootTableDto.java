@@ -1,9 +1,6 @@
 package miniCastle.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "loot_table_Dto")
@@ -77,5 +74,4 @@ public class LootTableDto {
 		this.name = name;
 	}
 
-	
 }

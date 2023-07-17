@@ -1,9 +1,6 @@
 package miniCastle.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "monster_card_Dto")
@@ -74,7 +71,5 @@ public class MonsterCardDto {
 	public void setXpReward(int xpReward) {
 		this.xpReward = xpReward;
 	}
-
-	
 
 }
