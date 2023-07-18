@@ -1,5 +1,7 @@
 package miniCastle.dto;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -21,6 +23,12 @@ public class LootTableDto {
 
 	@Column(name = "name")
 	private String name;
+	
+	@OneToMany(mappedBy = "lootTable")
+    private List<TreasureCardDto> treasureCards;
+
+    @ManyToMany(mappedBy = "lootTables")
+    private List<ShopCardDto> shopCards;
 
 	public LootTableDto() {
 	}

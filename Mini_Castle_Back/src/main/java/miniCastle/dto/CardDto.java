@@ -1,5 +1,7 @@
 package miniCastle.dto;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -26,6 +28,18 @@ public class CardDto {
 
 	@Column(name = "card_image_path")
 	private String cardImagePath;
+	
+	@ManyToMany(mappedBy = "monsterCards")
+    private List<MonsterCardDto> monsterCards;
+
+    @ManyToMany(mappedBy = "trapCards")
+    private List<TrapCardDto> trapCards;
+
+    @ManyToMany(mappedBy = "treasureCards")
+    private List<TreasureCardDto> treasureCards;
+
+    @ManyToMany(mappedBy = "shopCards")
+    private List<ShopCardDto> shopCards;
 
 	public CardDto() {
 	}

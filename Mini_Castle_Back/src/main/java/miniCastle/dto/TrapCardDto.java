@@ -1,5 +1,7 @@
 package miniCastle.dto;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -18,6 +20,12 @@ public class TrapCardDto {
 	
 	@Column(name = "damage")
 	private int damage;
+	
+	@ManyToMany
+    @JoinTable(name = "card_trap_card",
+            joinColumns = @JoinColumn(name = "trap_id"),
+            inverseJoinColumns = @JoinColumn(name = "card_id"))
+    private List<CardDto> trapCards;
 
 	public TrapCardDto() {
     }
