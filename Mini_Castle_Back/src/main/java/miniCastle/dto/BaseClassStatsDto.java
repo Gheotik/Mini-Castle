@@ -3,7 +3,7 @@ package miniCastle.dto;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "base_class_stats")
+@Table(name = "base_class_stats_Dto")
 
 public class BaseClassStatsDto {
 	@Id
@@ -30,6 +30,8 @@ public class BaseClassStatsDto {
 
 	@Column(name = "image_path")
 	private String imagePath;
+
+	private PlayerDto player;
 
 	public BaseClassStatsDto() {
 

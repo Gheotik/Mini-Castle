@@ -17,25 +17,23 @@ public class TrapCardDto {
 
 	@Column(name = "skill_check")
 	private int skillCheck;
-	
+
 	@Column(name = "damage")
 	private int damage;
-	
+
 	@ManyToMany
-    @JoinTable(name = "card_trap_card",
-            joinColumns = @JoinColumn(name = "trap_id"),
-            inverseJoinColumns = @JoinColumn(name = "card_id"))
-    private List<CardDto> trapCards;
+	@JoinTable(name = "card_trap_card", joinColumns = @JoinColumn(name = "trap_id"), inverseJoinColumns = @JoinColumn(name = "card_id"))
+	private List<CardDto> trapCards;
 
 	public TrapCardDto() {
-    }
+	}
 
-	public TrapCardDto(int cardId, int trapId, int skillCheck,int damage) {
-        this.cardId = cardId;
-        this.trapId = trapId;
-        this.skillCheck = skillCheck;
-        this.damage=damage;
-    }
+	public TrapCardDto(int cardId, int trapId, int skillCheck, int damage) {
+		this.cardId = cardId;
+		this.trapId = trapId;
+		this.skillCheck = skillCheck;
+		this.damage = damage;
+	}
 
 	public int getCardId() {
 		return cardId;
@@ -69,5 +67,4 @@ public class TrapCardDto {
 		this.damage = damage;
 	}
 
-		
 }

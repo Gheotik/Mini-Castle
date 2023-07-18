@@ -23,12 +23,12 @@ public class LootTableDto {
 
 	@Column(name = "item_name")
 	private String name;
-	
-	@OneToMany(mappedBy = "lootTable")
-    private List<TreasureCardDto> treasureCards;
 
-    @ManyToMany(mappedBy = "lootTables")
-    private List<ShopCardDto> shopCards;
+	@OneToMany(mappedBy = "lootTable")
+	private List<TreasureCardDto> treasureCards;
+
+	@ManyToMany(mappedBy = "lootTables")
+	private List<ShopCardDto> shopCards;
 
 	public LootTableDto() {
 	}
