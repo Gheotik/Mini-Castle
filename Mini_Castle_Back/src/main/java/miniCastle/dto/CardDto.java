@@ -14,7 +14,7 @@ public class CardDto {
 	@Column(name = "card_id")
 	private int cardId;
 
-	@Column(name = "name")
+	@Column(name = "card_name")
 	private String name;
 
 	@Column(name = "card_type")
@@ -101,6 +101,16 @@ public class CardDto {
 		this.cardImagePath = cardImagePath;
 	}
 
-	
+	@Override
+	public String toString() {
+	    return "CardDto{" +
+	            "cardId=" + cardId +
+	            ", name='" + name + '\'' +
+	            ", cardType='" + cardType + '\'' +
+	            ", description='" + description + '\'' +
+	            ", scoreValue=" + scoreValue +
+	            ", cardImagePath='" + cardImagePath + '\'' +
+	            '}';
+	}
 	
 }

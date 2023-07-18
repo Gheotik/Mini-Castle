@@ -12,7 +12,7 @@ public class LootTableDto {
 	@Column(name = "loot_id")
 	private int lootId;
 
-	@Column(name = "gearSlot_id")
+	@Column(name = "gear_slot_id")
 	private int gearSlotId;
 
 	@Column(name = "damage")
@@ -21,7 +21,7 @@ public class LootTableDto {
 	@Column(name = "armor")
 	private int armor;
 
-	@Column(name = "name")
+	@Column(name = "item_name")
 	private String name;
 	
 	@OneToMany(mappedBy = "lootTable")
