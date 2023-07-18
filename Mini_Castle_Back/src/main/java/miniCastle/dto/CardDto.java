@@ -5,7 +5,7 @@ import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "cardDto")
+@Table(name = "card_Dto")
 
 public class CardDto {
 

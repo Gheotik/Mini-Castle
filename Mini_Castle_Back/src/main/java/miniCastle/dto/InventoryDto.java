@@ -1,53 +1,70 @@
 package miniCastle.dto;
 
-import java.util.ArrayList;
+import jakarta.persistence.*;
 
 import miniCastle.dao.Gear;
 
+@Entity
+@Table(name = "inventory_Dto")
+
 public class InventoryDto {
-	
-	private int coins;
-	
-	private int potion; 
-	
-	private ArrayList<Gear> gears;
 
-	
-	public InventoryDto(int coins, int potion, ArrayList<Gear> gears) {
-		super();
-		this.coins = coins;
+	@Id
+	@Column(name = "character_id")
+	private Integer characterId;
+
+	@Column(name = "coin")
+	private Integer coin;
+
+	@Column(name = "potion")
+	private Integer potion;
+
+	@OneToOne
+	@PrimaryKeyJoinColumn
+	private CharacterDto character;
+
+	public InventoryDto() {
+
+	}
+
+	public InventoryDto(Integer characterId, Integer coin, Integer potion, CharacterDto character) {
+		this.characterId = characterId;
+		this.coin = coin;
 		this.potion = potion;
-		this.gears = gears;
+		this.character = character;
 	}
 
+	// Getters and setters
 
-	public int getCoins() {
-		return coins;
+	public Integer getCharacterId() {
+		return characterId;
 	}
 
-
-	public void setCoins(int coins) {
-		this.coins = coins;
+	public void setCharacterId(Integer characterId) {
+		this.characterId = characterId;
 	}
 
+	public Integer getCoin() {
+		return coin;
+	}
 
-	public int getPotion() {
+	public void setCoin(Integer coin) {
+		this.coin = coin;
+	}
+
+	public Integer getPotion() {
 		return potion;
 	}
 
-
-	public void setPotion(int potion) {
+	public void setPotion(Integer potion) {
 		this.potion = potion;
 	}
 
-
-	public ArrayList<Gear> getGears() {
-		return gears;
+	public CharacterDto getCharacter() {
+		return character;
 	}
 
-
-	public void setGears(ArrayList<Gear> gears) {
-		this.gears = gears;
+	public void setCharacter(CharacterDto character) {
+		this.character = character;
 	}
-	
 }

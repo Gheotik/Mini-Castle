@@ -1,51 +1,58 @@
 package miniCastle.dto;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "base_class_stats")
+
 public class BaseClassStatsDto {
+	@Id
+	@Column(name = "class_id")
+	private Integer classId;
 
-	private int baseHp;
-
-	private int baseDamage;
-
+	@Column(name = "name")
 	private String name;
 
-	private int skill;
+	@Column(name = "base_hp")
+	private Integer baseHp;
 
-	private int baseArmor;
+	@Column(name = "base_armor")
+	private Integer baseArmor;
 
-	private String charImagePath;
+	@Column(name = "base_damage")
+	private Integer baseDamage;
 
-	public BaseClassStatsDto(int baseHp, int baseDamage, String name, int skill, int baseArmor, String charImagePath) {
-		super();
-		this.baseHp = baseHp;
-		this.baseDamage = baseDamage;
+	@Column(name = "skill_name")
+	private String skillName;
+
+	@Column(name = "skill_description")
+	private String skillDescription;
+
+	@Column(name = "image_path")
+	private String imagePath;
+
+	public BaseClassStatsDto() {
+
+	}
+
+	public BaseClassStatsDto(Integer classId, String name, Integer baseHp, Integer baseArmor, Integer baseDamage,
+			String skillName, String skillDescription, String imagePath) {
+		this.classId = classId;
 		this.name = name;
-		this.skill = skill;
-		this.baseArmor = baseArmor;
-		this.charImagePath = charImagePath;
-	}
-
-	public String getCharImagePath() {
-		return charImagePath;
-	}
-
-	public void setCharImagePath(String charImagePath) {
-		this.charImagePath = charImagePath;
-	}
-
-	public int getBaseHp() {
-		return baseHp;
-	}
-
-	public void setBaseHp(int baseHp) {
 		this.baseHp = baseHp;
-	}
-
-	public int getBaseDamage() {
-		return baseDamage;
-	}
-
-	public void setBaseDamage(int baseDamage) {
+		this.baseArmor = baseArmor;
 		this.baseDamage = baseDamage;
+		this.skillName = skillName;
+		this.skillDescription = skillDescription;
+		this.imagePath = imagePath;
+	}
+
+	public Integer getClassId() {
+		return classId;
+	}
+
+	public void setClassId(Integer classId) {
+		this.classId = classId;
 	}
 
 	public String getName() {
@@ -56,20 +63,51 @@ public class BaseClassStatsDto {
 		this.name = name;
 	}
 
-	public int getSkill() {
-		return skill;
+	public Integer getBaseHp() {
+		return baseHp;
 	}
 
-	public void setSkill(int skill) {
-		this.skill = skill;
+	public void setBaseHp(Integer baseHp) {
+		this.baseHp = baseHp;
 	}
 
-	public int getBaseArmor() {
+	public Integer getBaseArmor() {
 		return baseArmor;
 	}
 
-	public void setBaseArmor(int baseArmor) {
+	public void setBaseArmor(Integer baseArmor) {
 		this.baseArmor = baseArmor;
 	}
 
+	public Integer getBaseDamage() {
+		return baseDamage;
+	}
+
+	public void setBaseDamage(Integer baseDamage) {
+		this.baseDamage = baseDamage;
+	}
+
+	public String getSkillName() {
+		return skillName;
+	}
+
+	public void setSkillName(String skillName) {
+		this.skillName = skillName;
+	}
+
+	public String getSkillDescription() {
+		return skillDescription;
+	}
+
+	public void setSkillDescription(String skillDescription) {
+		this.skillDescription = skillDescription;
+	}
+
+	public String getImagePath() {
+		return imagePath;
+	}
+
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
 }

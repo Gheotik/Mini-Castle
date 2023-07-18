@@ -1,51 +1,93 @@
 package miniCastle.dto;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "gear_Dto")
+
 public class GearDto {
-	
-	private int gearSlotId;
 
-	private int damage;
-	
-	private int armor;
-	
-	private int price;
+	@Id
+	@Column(name = "character_id")
+	private Integer characterId;
 
+	@Column(name = "gear_slot_id")
+	private String gearSlotId;
 
-	public GearDto(int gearSlotId, int damage, int armor, int price) {
-		super();
+	@Column(name = "damage")
+	private Integer damage;
+
+	@Column(name = "armor")
+	private Integer armor;
+
+	@Column(name = "price")
+	private Integer price;
+
+	@ManyToOne
+	@JoinColumn(name = "character_id", insertable = false, updatable = false)
+	private CharacterDto character;
+
+	public GearDto() {
+
+	}
+
+	public GearDto(Integer characterId, String gearSlotId, Integer damage, Integer armor, Integer price,
+			CharacterDto character) {
+		this.characterId = characterId;
+		this.gearSlotId = gearSlotId;
 		this.damage = damage;
 		this.armor = armor;
 		this.price = price;
+		this.character = character;
 	}
-	
-	public int getGearSlotId() {
+
+	// Getters and setters
+
+	public Integer getCharacterId() {
+		return characterId;
+	}
+
+	public void setCharacterId(Integer characterId) {
+		this.characterId = characterId;
+	}
+
+	public String getGearSlotId() {
 		return gearSlotId;
 	}
-	
-	public int getPrice() {
-		return price;
+
+	public void setGearSlotId(String gearSlotId) {
+		this.gearSlotId = gearSlotId;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
-	}
-
-	public int getDamage() {
+	public Integer getDamage() {
 		return damage;
 	}
 
-	public void setDamage(int damage) {
+	public void setDamage(Integer damage) {
 		this.damage = damage;
 	}
 
-	public int getArmor() {
+	public Integer getArmor() {
 		return armor;
 	}
 
-	public void setArmor(int armor) {
+	public void setArmor(Integer armor) {
 		this.armor = armor;
 	}
-	
-	
-	
+
+	public Integer getPrice() {
+		return price;
+	}
+
+	public void setPrice(Integer price) {
+		this.price = price;
+	}
+
+	public CharacterDto getCharacter() {
+		return character;
+	}
+
+	public void setCharacter(CharacterDto character) {
+		this.character = character;
+	}
 }
