@@ -1,5 +1,7 @@
 package miniCastle.dto;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -21,6 +23,21 @@ public class PlayerDto {
 
 	@Column(name = "best_score")
 	private Integer bestScore;
+
+	@OneToOne(mappedBy = "player")
+	private CurrentCardDto currentCard;
+
+	@OneToOne(mappedBy = "player")
+	private BaseClassStatsDto baseClassStats;
+
+	@OneToOne(mappedBy = "player")
+	private CharacterDto character;
+
+	@OneToOne(mappedBy = "player")
+	private InventoryDto inventory;
+
+	@OneToMany(mappedBy = "player")
+	private List<GearDto> gearList;
 
 	public PlayerDto() {
 
@@ -73,4 +90,45 @@ public class PlayerDto {
 	public void setBestScore(Integer bestScore) {
 		this.bestScore = bestScore;
 	}
+
+	public CurrentCardDto getCurrentCard() {
+		return currentCard;
+	}
+
+	public void setCurrentCard(CurrentCardDto currentCard) {
+		this.currentCard = currentCard;
+	}
+
+	public BaseClassStatsDto getBaseClassStats() {
+		return baseClassStats;
+	}
+
+	public void setBaseClassStats(BaseClassStatsDto baseClassStats) {
+		this.baseClassStats = baseClassStats;
+	}
+
+	public CharacterDto getCharacter() {
+		return character;
+	}
+
+	public void setCharacter(CharacterDto character) {
+		this.character = character;
+	}
+
+	public InventoryDto getInventory() {
+		return inventory;
+	}
+
+	public void setInventory(InventoryDto inventory) {
+		this.inventory = inventory;
+	}
+
+	public List<GearDto> getGearList() {
+		return gearList;
+	}
+
+	public void setGearList(List<GearDto> gearList) {
+		this.gearList = gearList;
+	}
+
 }
