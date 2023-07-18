@@ -28,18 +28,18 @@ public class CardDto {
 
 	@Column(name = "card_image_path")
 	private String cardImagePath;
-	
+
 	@ManyToMany(mappedBy = "monsterCards")
-    private List<MonsterCardDto> monsterCards;
+	private List<MonsterCardDto> monsterCards;
 
-    @ManyToMany(mappedBy = "trapCards")
-    private List<TrapCardDto> trapCards;
+	@ManyToMany(mappedBy = "trapCards")
+	private List<TrapCardDto> trapCards;
 
-    @ManyToMany(mappedBy = "treasureCards")
-    private List<TreasureCardDto> treasureCards;
+	@ManyToMany(mappedBy = "treasureCards")
+	private List<TreasureCardDto> treasureCards;
 
-    @ManyToMany(mappedBy = "shopCards")
-    private List<ShopCardDto> shopCards;
+	@ManyToMany(mappedBy = "shopCards")
+	private List<ShopCardDto> shopCards;
 
 	public CardDto() {
 	}
@@ -103,14 +103,9 @@ public class CardDto {
 
 	@Override
 	public String toString() {
-	    return "CardDto{" +
-	            "cardId=" + cardId +
-	            ", name='" + name + '\'' +
-	            ", cardType='" + cardType + '\'' +
-	            ", description='" + description + '\'' +
-	            ", scoreValue=" + scoreValue +
-	            ", cardImagePath='" + cardImagePath + '\'' +
-	            '}';
+		return "CardDto{" + "cardId=" + cardId + ", name='" + name + '\'' + ", cardType='" + cardType + '\''
+				+ ", description='" + description + '\'' + ", scoreValue=" + scoreValue + ", cardImagePath='"
+				+ cardImagePath + '\'' + '}';
 	}
-	
+
 }

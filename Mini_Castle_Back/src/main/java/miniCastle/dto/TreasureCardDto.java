@@ -16,18 +16,18 @@ public class TreasureCardDto {
 
 	@Column(name = "treasure_id")
 	private int treasureId;
-	
+
 	@OneToMany(mappedBy = "treasureCard")
-    private List<LootTableDto> lootTables;
+	private List<LootTableDto> lootTables;
 
 	public TreasureCardDto() {
-    }
+	}
 
 	public TreasureCardDto(int cardId, int lootId, int treasureId) {
-        this.cardId = cardId;
-        this.lootId = lootId;
-        this.treasureId = treasureId;
-    }
+		this.cardId = cardId;
+		this.lootId = lootId;
+		this.treasureId = treasureId;
+	}
 
 	public int getCardId() {
 		return cardId;
@@ -53,5 +53,4 @@ public class TreasureCardDto {
 		this.treasureId = treasureId;
 	}
 
-	
 }
