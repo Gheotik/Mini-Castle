@@ -1,9 +1,8 @@
 package miniCastle.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import java.util.List;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "loot_table_Dto")
@@ -13,7 +12,7 @@ public class LootTableDto {
 	@Column(name = "loot_id")
 	private int lootId;
 
-	@Column(name = "gearSlot_id")
+	@Column(name = "gear_slot_id")
 	private int gearSlotId;
 
 	@Column(name = "damage")
@@ -22,8 +21,14 @@ public class LootTableDto {
 	@Column(name = "armor")
 	private int armor;
 
-	@Column(name = "name")
+	@Column(name = "item_name")
 	private String name;
+	
+	@OneToMany(mappedBy = "lootTable")
+    private List<TreasureCardDto> treasureCards;
+
+    @ManyToMany(mappedBy = "lootTables")
+    private List<ShopCardDto> shopCards;
 
 	public LootTableDto() {
 	}
@@ -77,5 +82,4 @@ public class LootTableDto {
 		this.name = name;
 	}
 
-	
 }

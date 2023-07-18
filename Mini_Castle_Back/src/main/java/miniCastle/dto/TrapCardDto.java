@@ -1,9 +1,8 @@
 package miniCastle.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import java.util.List;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "trap_card_Dto")
@@ -21,6 +20,12 @@ public class TrapCardDto {
 	
 	@Column(name = "damage")
 	private int damage;
+	
+	@ManyToMany
+    @JoinTable(name = "card_trap_card",
+            joinColumns = @JoinColumn(name = "trap_id"),
+            inverseJoinColumns = @JoinColumn(name = "card_id"))
+    private List<CardDto> trapCards;
 
 	public TrapCardDto() {
     }

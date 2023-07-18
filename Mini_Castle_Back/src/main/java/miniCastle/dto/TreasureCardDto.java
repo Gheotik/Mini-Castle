@@ -1,9 +1,8 @@
 package miniCastle.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
+import java.util.List;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "treasure_card_Dto")
@@ -17,6 +16,9 @@ public class TreasureCardDto {
 
 	@Column(name = "treasure_id")
 	private int treasureId;
+	
+	@OneToMany(mappedBy = "treasureCard")
+    private List<LootTableDto> lootTables;
 
 	public TreasureCardDto() {
     }

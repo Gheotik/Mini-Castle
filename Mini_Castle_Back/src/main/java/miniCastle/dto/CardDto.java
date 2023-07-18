@@ -1,11 +1,8 @@
 package miniCastle.dto;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import java.util.List;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "cardDto")
@@ -17,7 +14,7 @@ public class CardDto {
 	@Column(name = "card_id")
 	private int cardId;
 
-	@Column(name = "name")
+	@Column(name = "card_name")
 	private String name;
 
 	@Column(name = "card_type")
@@ -31,6 +28,18 @@ public class CardDto {
 
 	@Column(name = "card_image_path")
 	private String cardImagePath;
+	
+	@ManyToMany(mappedBy = "monsterCards")
+    private List<MonsterCardDto> monsterCards;
+
+    @ManyToMany(mappedBy = "trapCards")
+    private List<TrapCardDto> trapCards;
+
+    @ManyToMany(mappedBy = "treasureCards")
+    private List<TreasureCardDto> treasureCards;
+
+    @ManyToMany(mappedBy = "shopCards")
+    private List<ShopCardDto> shopCards;
 
 	public CardDto() {
 	}
@@ -92,6 +101,16 @@ public class CardDto {
 		this.cardImagePath = cardImagePath;
 	}
 
-	
+	@Override
+	public String toString() {
+	    return "CardDto{" +
+	            "cardId=" + cardId +
+	            ", name='" + name + '\'' +
+	            ", cardType='" + cardType + '\'' +
+	            ", description='" + description + '\'' +
+	            ", scoreValue=" + scoreValue +
+	            ", cardImagePath='" + cardImagePath + '\'' +
+	            '}';
+	}
 	
 }
