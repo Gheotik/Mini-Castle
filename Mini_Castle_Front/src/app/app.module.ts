@@ -31,6 +31,7 @@ import { BodyComponent } from './body/body.component';
 import { CardHolderComponent } from './shared/card-holder/card-holder.component';
 import { CreationCardComponent } from './feature/creation-card/creation-card.component';
 import { FormulaireComponent } from './shared/formulaire/formulaire.component';
+import { PlayerCombatInterfaceComponent } from './layout/player-combat-interface/player-combat-interface.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { FormulaireComponent } from './shared/formulaire/formulaire.component';
     BodyComponent,
     CardHolderComponent,
     CreationCardComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    PlayerCombatInterfaceComponent
   ],
   imports: [
     BrowserModule,

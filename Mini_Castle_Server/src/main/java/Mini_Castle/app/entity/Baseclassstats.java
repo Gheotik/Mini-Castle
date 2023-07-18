@@ -13,7 +13,7 @@ import lombok.Setter;
 public class Baseclassstats {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int class_id;
     @Column
     private String name;
     @Column
