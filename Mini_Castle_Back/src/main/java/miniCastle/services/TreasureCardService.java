@@ -14,11 +14,10 @@ public class TreasureCardService {
 	public void update(TreasureCardDto treasureCardDto)
 	{
 		TreasureCard treasureCard = new TreasureCard(
-				treasureCardDto.getTreasureId(),
-				treasureCardDto.getDescription(),
-				treasureCardDto.getScoreValue(),
-				treasureCardDto.getCardImagePath(),
-				treasureCardDto.getLoot()
+				treasureCardDto.getCardId(),
+				treasureCardDto.getLootId() ,
+				treasureCardDto.getTreasureId()
+
 		);
 		this.repository.update(treasureCard);
 	}
@@ -26,11 +25,9 @@ public class TreasureCardService {
 	public void insert(TreasureCardDto treasureCardDto)
 	{
 		TreasureCard treasureCard = new TreasureCard(
-				treasureCardDto.getTreasureId(),
-				treasureCardDto.getDescription(),
-				treasureCardDto.getScoreValue(),
-				treasureCardDto.getCardImagePath(),
-				treasureCardDto.getLoot()
+				treasureCardDto.getCardId(),
+				treasureCardDto.getLootId() ,
+				treasureCardDto.getTreasureId()
 		);
 		this.repository.insert(treasureCard);
 	}

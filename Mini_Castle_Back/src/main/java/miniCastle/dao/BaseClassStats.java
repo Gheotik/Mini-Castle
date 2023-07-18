@@ -8,7 +8,7 @@ public class BaseClassStats {
 	
 	private String name;
 	
-	private int skill;
+	private String skill;
 	
 	private int baseArmor;
 	
@@ -20,7 +20,7 @@ public class BaseClassStats {
 	}
 
 	
-	public BaseClassStats(int baseHp, int baseDamage, String name, int skill, int baseArmor, String charImagePath) {
+	public BaseClassStats(int baseHp, int baseDamage, String name, String skill, int baseArmor, String charImagePath) {
 		super();
 		this.baseHp = baseHp;
 		this.baseDamage = baseDamage;
@@ -71,12 +71,13 @@ public class BaseClassStats {
 	}
 
 
-	public int getSkill() {
+	
+	public String getSkill() {
 		return skill;
 	}
 
 
-	public void setSkill(int skill) {
+	public void setSkill(String skill) {
 		this.skill = skill;
 	}
 

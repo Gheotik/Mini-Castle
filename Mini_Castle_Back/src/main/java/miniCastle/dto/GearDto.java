@@ -12,7 +12,7 @@ public class GearDto {
 	private Integer characterId;
 
 	@Column(name = "gear_slot_id")
-	private String gearSlotId;
+	private int gearSlotId;
 
 	@Column(name = "damage")
 	private Integer damage;
@@ -31,7 +31,7 @@ public class GearDto {
 
 	}
 
-	public GearDto(Integer characterId, String gearSlotId, Integer damage, Integer armor, Integer price,
+	public GearDto(Integer characterId, int gearSlotId, Integer damage, Integer armor, Integer price,
 			CharacterDto character) {
 		this.characterId = characterId;
 		this.gearSlotId = gearSlotId;
@@ -51,11 +51,13 @@ public class GearDto {
 		this.characterId = characterId;
 	}
 
-	public String getGearSlotId() {
+
+
+	public int getGearSlotId() {
 		return gearSlotId;
 	}
 
-	public void setGearSlotId(String gearSlotId) {
+	public void setGearSlotId(int gearSlotId) {
 		this.gearSlotId = gearSlotId;
 	}
 

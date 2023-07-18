@@ -10,7 +10,7 @@ public class CharacterService {
 	public void readCharacter(CharacterDto characterDto) {
 		// TODO Auto-generated method stub
 		
-		repository.findById(characterDto.getId());
+		repository.findById(characterDto.getCharacterId());
 	}
 
 }
