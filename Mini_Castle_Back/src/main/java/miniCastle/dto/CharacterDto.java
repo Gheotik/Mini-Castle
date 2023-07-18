@@ -1,84 +1,99 @@
 package miniCastle.dto;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "character_Dto")
+
 public class CharacterDto {
-	
-	private int id;
-	
-	private String name;
-	
-	private int armor;
-	
-	private int hp;
-	
-	private int damage;
-	
-	private int level;
-	
-	private int xp;
+	@Id
+    @Column(name = "character_id")
+    private Integer characterId;
 
-	
-	public CharacterDto(String name, int armor, int hp, int damage, int level, int xp) {
-		super();
-		this.name = name;
-		this.armor = armor;
-		this.hp = hp;
-		this.damage = damage;
-		this.level = level;
-		this.xp = xp;
-	}
+    @Column(name = "level")
+    private Integer level;
 
-	
-	public int getId() {
-		return id;
-	}
+    @Column(name = "xp")
+    private Integer xp;
+
+    @ManyToOne
+    @JoinColumn(name = "player_id")
+    private PlayerDto player;
+
+    @ManyToOne
+    @JoinColumn(name = "class_id")
+    private BaseClassStatsDto classStats;
+
+    @Column(name = "inventory_id")
+    private Integer inventoryId;
+
+   
+    public CharacterDto() {
+        
+    }
+
+    public CharacterDto(
+        Integer characterId,
+        Integer level,
+        Integer xp,
+        PlayerDto player,
+        BaseClassStatsDto classStats,
+        Integer inventoryId
+    ) {
+        this.characterId = characterId;
+        this.level = level;
+        this.xp = xp;
+        this.player = player;
+        this.classStats = classStats;
+        this.inventoryId = inventoryId;
+    }
 
 
-	public String getName() {
-		return name;
-	}
+    public Integer getCharacterId() {
+        return characterId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setCharacterId(Integer characterId) {
+        this.characterId = characterId;
+    }
 
-	public int getArmor() {
-		return armor;
-	}
+    public Integer getLevel() {
+        return level;
+    }
 
-	public void setArmor(int armor) {
-		this.armor = armor;
-	}
+    public void setLevel(Integer level) {
+        this.level = level;
+    }
 
-	public int getHp() {
-		return hp;
-	}
+    public Integer getXp() {
+        return xp;
+    }
 
-	public void setHp(int hp) {
-		this.hp = hp;
-	}
+    public void setXp(Integer xp) {
+        this.xp = xp;
+    }
 
-	public int getDamage() {
-		return damage;
-	}
+    public PlayerDto getPlayer() {
+        return player;
+    }
 
-	public void setDamage(int damage) {
-		this.damage = damage;
-	}
+    public void setPlayer(PlayerDto player) {
+        this.player = player;
+    }
 
-	public int getLevel() {
-		return level;
-	}
+    public BaseClassStatsDto getClassStats() {
+        return classStats;
+    }
 
-	public void setLevel(int level) {
-		this.level = level;
-	}
+    public void setClassStats(BaseClassStatsDto classStats) {
+        this.classStats = classStats;
+    }
 
-	public int getXp() {
-		return xp;
-	}
+    public Integer getInventoryId() {
+        return inventoryId;
+    }
 
-	public void setXp(int xp) {
-		this.xp = xp;
-	}
-	
+    public void setInventoryId(Integer inventoryId) {
+        this.inventoryId = inventoryId;
+    }
 }

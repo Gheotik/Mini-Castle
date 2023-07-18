@@ -3,7 +3,7 @@ package miniCastle.dto;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "current_card")
+@Table(name = "current_card_Dto")
 
 public class CurrentCardDto {
 	@Id
