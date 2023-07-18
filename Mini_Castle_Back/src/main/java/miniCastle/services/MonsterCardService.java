@@ -15,10 +15,8 @@ public class MonsterCardService {
 	public void update(MonsterCardDto monsterCardDto)
 	{
 		MonsterCard monsterCard = new MonsterCard(
+				monsterCardDto.getCardId(),
 				monsterCardDto.getMonsterId(),
-				monsterCardDto.getDescription(),
-				monsterCardDto.getScoreValue(),
-				monsterCardDto.getCardImagePath(),
 				monsterCardDto.getDamage(),
 				monsterCardDto.getHp(),
 				monsterCardDto.getXpReward()
@@ -29,10 +27,8 @@ public class MonsterCardService {
 	public void insert(MonsterCardDto monsterCardDto)
 	{
 		MonsterCard monsterCard = new MonsterCard(
+				monsterCardDto.getCardId(),
 				monsterCardDto.getMonsterId(),
-				monsterCardDto.getDescription(),
-				monsterCardDto.getScoreValue(),
-				monsterCardDto.getCardImagePath(),
 				monsterCardDto.getDamage(),
 				monsterCardDto.getHp(),
 				monsterCardDto.getXpReward()

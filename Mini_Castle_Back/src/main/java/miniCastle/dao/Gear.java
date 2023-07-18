@@ -57,6 +57,11 @@ public class Gear {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+
+
+	public void setGearSlotId(int gearSlotId) {
+		this.gearSlotId = gearSlotId;
+	}
 	
 	
 }

@@ -1,38 +1,25 @@
 package miniCastle.dao;
 
 public class TrapCard implements ICard {
-	private int trapId;
-	private String description;
-	private int scoreValue;
-	private String cardImagePath;
+	private int cardId;
 	private int skillCheck;
+	private int damage;
 
-		
-	public TrapCard(int trapId, String description, int scoreValue, String cardImagePath, int skillCheck) {
-		this.description = description;
-		this.scoreValue = scoreValue;
-		this.cardImagePath = cardImagePath;
-		this.trapId = trapId;
+	public TrapCard(int cardId, int skillCheck, int damage) {
+		this.cardId = cardId;
 		this.skillCheck = skillCheck;
+		this.damage = damage;
+
 	}
 
-	
-	public String getDescription() {
-		return this.description;
+	public int getCardId() {
+		return cardId;
 	}
 
-	public int getScoreValue() {
-		return this.scoreValue;
+	public void setCardId(int cardId) {
+		this.cardId = cardId;
 	}
 
-	public void setScoreValue(int score) {
-		this.scoreValue = score;
-	}
-
-	public String getCardImagePath() {
-		return this.cardImagePath;
-	}
-	
 	public int getSkillCheck() {
 		return skillCheck;
 	}
@@ -41,19 +28,45 @@ public class TrapCard implements ICard {
 		this.skillCheck = skillCheck;
 	}
 
-	public int getTrapId() {
-		return trapId;
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
 	}
 
 	@Override
 	public String toString() {
-		return "TrapCard [trapId=" + trapId + ", description=" + description + ", scoreValue=" + scoreValue
-				+ ", cardImagePath=" + cardImagePath + ", skillCheck=" + skillCheck + "]";
+		return "TrapCard [cardId=" + cardId + ", skillCheck=" + skillCheck + ", damage=" + damage + "]";
 	}
-
 
 	public void run() {
 		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getScoreValue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setScoreValue(int score) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public String getCardImagePath() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

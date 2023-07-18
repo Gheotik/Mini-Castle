@@ -1,54 +1,70 @@
 package miniCastle.dao;
 
 public class TreasureCard implements ICard {
+	private int cardId;
+	private int lootId;
 	private int treasureId;
-	private String description;
-	private int scoreValue;
-	private String cardImagePath;
-	private Loot loot;
-	
-	
-	public TreasureCard(int treasureId, String description, int scoreValue, String cardImagePath, Loot loot) {
+
+
+	public TreasureCard(int cardId, int lootId, int treasureId) {
 		super();
+		this.cardId = cardId;
+		this.lootId = lootId;
 		this.treasureId = treasureId;
-		this.description = description;
-		this.scoreValue = scoreValue;
-		this.cardImagePath = cardImagePath;
-		this.loot = loot;
-	}
-	
-	
-	public String getDescription() {
-		return this.description;
 	}
 
-	public int getScoreValue() {
-		return this.scoreValue;
+	public int getCardId() {
+		return cardId;
 	}
 
-	public void setScoreValue(int score) {
-		this.scoreValue = score;
+	public void setCardId(int cardId) {
+		this.cardId = cardId;
 	}
 
-	public String getCardImagePath() {
-		return this.cardImagePath;
-	}
-	
-	public Loot getLoot() {
-		return this.loot;
+	public int getLootId() {
+		return lootId;
 	}
 
-	public void setLoot(Loot loot) {
-		this.loot = loot;
+	public void setLootId(int lootId) {
+		this.lootId = lootId;
 	}
 
 	public int getTreasureId() {
 		return treasureId;
 	}
 
+	public void setTreasureId(int treasureId) {
+		this.treasureId = treasureId;
+	}
+
+	
 
 	public void run() {
 		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getScoreValue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setScoreValue(int score) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public String getCardImagePath() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

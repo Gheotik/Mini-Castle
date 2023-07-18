@@ -14,11 +14,9 @@ public class TrapCardService {
 	public void update(TrapCardDto trapCardDto)
 	{
 		TrapCard trapCard = new TrapCard(
-				trapCardDto.getTrapId(),
-				trapCardDto.getDescription(),
-				trapCardDto.getScoreValue(),
-				trapCardDto.getCardImagePath(),
-				trapCardDto.getSkillCheck()
+				trapCardDto.getCardId(),
+				trapCardDto.getSkillCheck(),
+				trapCardDto.getDamage()
 		);
 		this.repository.update(trapCard);
 	}
@@ -26,11 +24,9 @@ public class TrapCardService {
 	public void insert(TrapCardDto trapCardDto)
 	{
 		TrapCard trapCard = new TrapCard(
-				trapCardDto.getTrapId(),
-				trapCardDto.getDescription(),
-				trapCardDto.getScoreValue(),
-				trapCardDto.getCardImagePath(),
-				trapCardDto.getSkillCheck()
+				trapCardDto.getCardId(),
+				trapCardDto.getSkillCheck(),
+				trapCardDto.getDamage()
 		);
 		this.repository.insert(trapCard);	
 	}

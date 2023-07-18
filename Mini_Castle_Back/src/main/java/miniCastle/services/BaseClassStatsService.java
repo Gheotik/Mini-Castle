@@ -15,12 +15,13 @@ public class BaseClassStatsService {
 				baseClassStatsDto.getBaseHp(),
 				baseClassStatsDto.getBaseDamage(),
 				baseClassStatsDto.getName(),
-				baseClassStatsDto.getSkill(),
+				baseClassStatsDto.getSkillName(),
 				baseClassStatsDto.getBaseArmor(),
-				baseClassStatsDto.getCharImagePath()
+				baseClassStatsDto.getImagePath()
 				);
 		
 		repository.insert(baseClassStats);
 	}
 
 }
+

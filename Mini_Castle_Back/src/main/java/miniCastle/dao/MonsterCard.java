@@ -1,45 +1,25 @@
 package miniCastle.dao;
 
 public class MonsterCard implements ICard {
+
+	private int cardId;
 	private int monsterId;
-	private String description;
-	private int scoreValue;
-	private String cardImagePath;
 	private int damage;
 	private int hp;
 	private int xpReward;
 
-		
-	public MonsterCard(int monsterId, String description, int scoreValue, String cardImagePath, int damage, int hp, int xpReward) {
-		this.description = description;
-		this.scoreValue = scoreValue;
-		this.cardImagePath = cardImagePath;
+	public MonsterCard(int cardId, int monsterId, int damage, int hp, int xpReward) {
+		this.cardId = cardId;
 		this.monsterId = monsterId;
 		this.damage = damage;
 		this.hp = hp;
 		this.xpReward = xpReward;
 	}
 
-	
-	public String getDescription() {
-		return this.description;
-	}
-
-	public int getScoreValue() {
-		return this.scoreValue;
-	}
-
-	public void setScoreValue(int score) {
-		this.scoreValue = score;
-	}
-
-	public String getCardImagePath() {
-		return this.cardImagePath;
-	}
-	
 	public int getDamage() {
 		return damage;
 	}
+	
 
 	public void setDamage(int damage) {
 		this.damage = damage;
@@ -61,17 +41,55 @@ public class MonsterCard implements ICard {
 		return xpReward;
 	}
 
-	@Override
-	public String toString() {
-		return "MonsterCard [monsterId=" + monsterId + ", description=" + description + ", scoreValue=" + scoreValue
-				+ ", cardImagePath=" + cardImagePath + ", damage=" + damage + ", hp=" + hp + ", xpReward=" + xpReward
-				+ "]";
+	public int getCardId() {
+		return cardId;
 	}
 
+	public void setCardId(int cardId) {
+		this.cardId = cardId;
+	}
+
+	public void setMonsterId(int monsterId) {
+		this.monsterId = monsterId;
+	}
+
+	public void setXpReward(int xpReward) {
+		this.xpReward = xpReward;
+	}
+
+	@Override
+	public String toString() {
+		return "MonsterCard [cardId=" + cardId + ", monsterId=" + monsterId + ",  damage=" + damage + ", hp=" + hp
+				+ ", xpReward=" + xpReward + "]";
+	}
 
 	public void run() {
 		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getScoreValue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setScoreValue(int score) {
+		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public String getCardImagePath() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
