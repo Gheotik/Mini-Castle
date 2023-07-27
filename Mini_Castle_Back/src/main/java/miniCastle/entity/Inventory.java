@@ -1,13 +1,13 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import jakarta.persistence.*;
 
 import miniCastle.dao.Gear;
 
 @Entity
-@Table(name = "inventory_Dto")
+@Table(name = "inventory")
 
-public class InventoryDto {
+public class Inventory {
 
 	@Id
 	@Column(name = "character_id")
@@ -21,13 +21,13 @@ public class InventoryDto {
 
 	@OneToOne
 	@PrimaryKeyJoinColumn
-	private CharacterDto character;
+	private Character character;
 
-	public InventoryDto() {
+	public Inventory() {
 
 	}
 
-	public InventoryDto(Integer characterId, Integer coin, Integer potion, CharacterDto character) {
+	public Inventory(Integer characterId, Integer coin, Integer potion, Character character) {
 		this.characterId = characterId;
 		this.coin = coin;
 		this.potion = potion;
@@ -60,11 +60,11 @@ public class InventoryDto {
 		this.potion = potion;
 	}
 
-	public CharacterDto getCharacter() {
+	public Character getCharacter() {
 		return character;
 	}
 
-	public void setCharacter(CharacterDto character) {
+	public void setCharacter(Character character) {
 		this.character = character;
 	}
 }

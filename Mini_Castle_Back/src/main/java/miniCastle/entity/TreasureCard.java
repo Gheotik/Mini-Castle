@@ -1,13 +1,13 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import java.util.List;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "treasure_card_Dto")
+@Table(name = "treasure_card")
 
-public class TreasureCardDto {
+public class TreasureCard {
 	@Column(name = "card_id")
 	private int cardId;
 
@@ -18,12 +18,12 @@ public class TreasureCardDto {
 	private int treasureId;
 
 	@OneToMany(mappedBy = "treasureCard")
-	private List<LootTableDto> lootTables;
+	private List<LootTable> lootTables;
 
-	public TreasureCardDto() {
+	public TreasureCard() {
 	}
 
-	public TreasureCardDto(int cardId, int lootId, int treasureId) {
+	public TreasureCard(int cardId, int lootId, int treasureId) {
 		this.cardId = cardId;
 		this.lootId = lootId;
 		this.treasureId = treasureId;

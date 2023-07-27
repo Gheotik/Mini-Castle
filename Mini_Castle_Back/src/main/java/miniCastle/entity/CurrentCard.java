@@ -1,11 +1,11 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "current_card_Dto")
 
-public class CurrentCardDto {
+public class CurrentCard {
 	@Id
 	@Column(name = "player_id")
 	private Integer playerId;
@@ -37,11 +37,11 @@ public class CurrentCardDto {
 	@Column(name = "shop_item_quantity")
 	private Integer shopItemQuantity;
 
-	public CurrentCardDto() {
+	public CurrentCard() {
 
 	}
 
-	public CurrentCardDto(Integer playerId, String cardType, Integer playerPosition, Integer monsterDamage,
+	public CurrentCard(Integer playerId, String cardType, Integer playerPosition, Integer monsterDamage,
 			Integer monsterHp, Integer xpReward, Integer trapSkillCheck, Integer lootId, Integer shopItemPrice,
 			Integer shopItemQuantity) {
 		this.playerId = playerId;

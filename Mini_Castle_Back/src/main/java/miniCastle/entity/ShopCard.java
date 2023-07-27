@@ -1,4 +1,4 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "shop_card_Dto")
 
-public class ShopCardDto {
+public class ShopCard {
 
 	@Column(name = "card_id")
 	private int cardId;
@@ -26,15 +26,15 @@ public class ShopCardDto {
 
 	@ManyToMany
 	@JoinTable(name = "card_shop_card", joinColumns = @JoinColumn(name = "shop_id"), inverseJoinColumns = @JoinColumn(name = "card_id"))
-	private List<CardDto> shopCards;
+	private List<Card> shopCards;
 
 	@ManyToMany(mappedBy = "shopCards")
-	private List<LootTableDto> lootTables;
+	private List<LootTable> lootTables;
 
-	public ShopCardDto() {
+	public ShopCard() {
 	}
 
-	public ShopCardDto(int cardId, int shopId, int lootId, int price, int quantity) {
+	public ShopCard(int cardId, int shopId, int lootId, int price, int quantity) {
 		this.cardId = cardId;
 		this.shopId = shopId;
 		this.lootId = lootId;

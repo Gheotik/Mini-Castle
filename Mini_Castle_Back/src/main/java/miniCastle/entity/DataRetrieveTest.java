@@ -1,4 +1,4 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -44,7 +44,7 @@ public class DataRetrieveTest {
 				JsonNode rootNode = mapper.readTree(response.toString());
 
 				// Process card data
-				List<CardDto> cards = new ArrayList<>();
+				List<Card> cards = new ArrayList<>();
 				for (JsonNode cardNode : rootNode) {
 					int cardId = cardNode.get("id").asInt();
 					String cardName = cardNode.get("card_name").asText();
@@ -53,12 +53,12 @@ public class DataRetrieveTest {
 					int scoreValue = cardNode.get("score_value").asInt();
 					String cardImagePath = cardNode.get("card_image_path").asText();
 
-					CardDto card = new CardDto(cardId, cardName, cardType, description, scoreValue, cardImagePath);
+					Card card = new Card(cardId, cardName, cardType, description, scoreValue, cardImagePath);
 					cards.add(card);
 				}
 
 				// Print card data
-				for (CardDto card : cards) {
+				for (Card card : cards) {
 					System.out.println(card);
 				}
 			} else {

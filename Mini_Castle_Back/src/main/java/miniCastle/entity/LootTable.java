@@ -1,4 +1,4 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "loot_table_Dto")
 
-public class LootTableDto {
+public class LootTable {
 
 	@Column(name = "loot_id")
 	private int lootId;
@@ -25,15 +25,15 @@ public class LootTableDto {
 	private String name;
 
 	@OneToMany(mappedBy = "lootTable")
-	private List<TreasureCardDto> treasureCards;
+	private List<TreasureCard> treasureCards;
 
 	@ManyToMany(mappedBy = "lootTables")
-	private List<ShopCardDto> shopCards;
+	private List<ShopCard> shopCards;
 
-	public LootTableDto() {
+	public LootTable() {
 	}
 
-	public LootTableDto(int lootId, int gearSlotId, int damage, int armor, String name) {
+	public LootTable(int lootId, int gearSlotId, int damage, int armor, String name) {
 		super();
 		this.lootId = lootId;
 		this.gearSlotId = gearSlotId;
