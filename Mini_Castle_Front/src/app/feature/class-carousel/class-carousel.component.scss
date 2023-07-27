@@ -1,0 +1,22 @@
+ngb-carousel {
+    min-width: 20vw;
+    max-width: 25vw;
+    height: auto;
+}
+ngb-carousel img {
+    width: 15vw;
+    outline: none;
+    padding-bottom: 20vh;
+}
+ngb-carousel carousel-caption {
+    padding-top: 20vh;
+}
+@media (width < 850px) {
+    ngb-carousel {
+        min-width: 50vw;
+        min-height: 20vh; 
+    }
+    ngb-carousel img {
+        padding-bottom: 20vh;
+    }
+  }
