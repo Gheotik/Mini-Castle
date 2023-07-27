@@ -7,6 +7,7 @@ import { ClassCarouselComponent } from './feature/class-carousel/class-carousel.
 import { TableComponent } from './shared/table/table.component';
 import { CreationCardComponent } from './feature/creation-card/creation-card.component';
 import { MapComponent } from './feature/map/map.component';
+import { TestComponent } from './feature/test/test.component';
 
 const routes: Routes = [
   {
