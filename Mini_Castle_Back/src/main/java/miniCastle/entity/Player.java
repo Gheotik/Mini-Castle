@@ -1,13 +1,13 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import java.util.List;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "player_Dto")
+@Table(name = "player")
 
-public class PlayerDto {
+public class Player {
 	@Id
 	@Column(name = "player_id")
 	private Integer playerId;
@@ -25,25 +25,25 @@ public class PlayerDto {
 	private Integer bestScore;
 
 	@OneToOne(mappedBy = "player")
-	private CurrentCardDto currentCard;
+	private CurrentCard currentCard;
 
 	@OneToOne(mappedBy = "player")
-	private BaseClassStatsDto baseClassStats;
+	private BaseClassStats baseClassStats;
 
 	@OneToOne(mappedBy = "player")
-	private CharacterDto character;
+	private Character character;
 
 	@OneToOne(mappedBy = "player")
-	private InventoryDto inventory;
+	private Inventory inventory;
 
 	@OneToMany(mappedBy = "player")
-	private List<GearDto> gearList;
+	private List<Gear> gearList;
 
-	public PlayerDto() {
+	public Player() {
 
 	}
 
-	public PlayerDto(Integer playerId, String mail, String nickname, String passwd, Integer bestScore) {
+	public Player(Integer playerId, String mail, String nickname, String passwd, Integer bestScore) {
 		this.playerId = playerId;
 		this.mail = mail;
 		this.nickname = nickname;
@@ -91,43 +91,43 @@ public class PlayerDto {
 		this.bestScore = bestScore;
 	}
 
-	public CurrentCardDto getCurrentCard() {
+	public CurrentCard getCurrentCard() {
 		return currentCard;
 	}
 
-	public void setCurrentCard(CurrentCardDto currentCard) {
+	public void setCurrentCard(CurrentCard currentCard) {
 		this.currentCard = currentCard;
 	}
 
-	public BaseClassStatsDto getBaseClassStats() {
+	public BaseClassStats getBaseClassStats() {
 		return baseClassStats;
 	}
 
-	public void setBaseClassStats(BaseClassStatsDto baseClassStats) {
+	public void setBaseClassStats(BaseClassStats baseClassStats) {
 		this.baseClassStats = baseClassStats;
 	}
 
-	public CharacterDto getCharacter() {
+	public Character getCharacter() {
 		return character;
 	}
 
-	public void setCharacter(CharacterDto character) {
+	public void setCharacter(Character character) {
 		this.character = character;
 	}
 
-	public InventoryDto getInventory() {
+	public Inventory getInventory() {
 		return inventory;
 	}
 
-	public void setInventory(InventoryDto inventory) {
+	public void setInventory(Inventory inventory) {
 		this.inventory = inventory;
 	}
 
-	public List<GearDto> getGearList() {
+	public List<Gear> getGearList() {
 		return gearList;
 	}
 
-	public void setGearList(List<GearDto> gearList) {
+	public void setGearList(List<Gear> gearList) {
 		this.gearList = gearList;
 	}
 

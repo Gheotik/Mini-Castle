@@ -1,13 +1,13 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import java.util.List;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "card_Dto")
+@Table(name = "card")
 
-public class CardDto {
+public class Card {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,21 +30,21 @@ public class CardDto {
 	private String cardImagePath;
 
 	@ManyToMany(mappedBy = "monsterCards")
-	private List<MonsterCardDto> monsterCards;
+	private List<MonsterCard> monsterCards;
 
 	@ManyToMany(mappedBy = "trapCards")
-	private List<TrapCardDto> trapCards;
+	private List<TrapCard> trapCards;
 
 	@ManyToMany(mappedBy = "treasureCards")
-	private List<TreasureCardDto> treasureCards;
+	private List<TreasureCard> treasureCards;
 
 	@ManyToMany(mappedBy = "shopCards")
-	private List<ShopCardDto> shopCards;
+	private List<ShopCard> shopCards;
 
-	public CardDto() {
+	public Card() {
 	}
 
-	public CardDto(int cardId, String name, String cardType, String description, int scoreValue, String cardImagePath) {
+	public Card(int cardId, String name, String cardType, String description, int scoreValue, String cardImagePath) {
 		this.cardId = cardId;
 		this.name = name;
 		this.cardType = cardType;
@@ -103,7 +103,7 @@ public class CardDto {
 
 	@Override
 	public String toString() {
-		return "CardDto{" + "cardId=" + cardId + ", name='" + name + '\'' + ", cardType='" + cardType + '\''
+		return "Card{" + "cardId=" + cardId + ", name='" + name + '\'' + ", cardType='" + cardType + '\''
 				+ ", description='" + description + '\'' + ", scoreValue=" + scoreValue + ", cardImagePath='"
 				+ cardImagePath + '\'' + '}';
 	}

@@ -1,11 +1,11 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "gear_Dto")
+@Table(name = "gear")
 
-public class GearDto {
+public class Gear {
 
 	@Id
 	@Column(name = "character_id")
@@ -25,14 +25,14 @@ public class GearDto {
 
 	@ManyToOne
 	@JoinColumn(name = "character_id", insertable = false, updatable = false)
-	private CharacterDto character;
+	private Character character;
 
-	public GearDto() {
+	public Gear() {
 
 	}
 
-	public GearDto(Integer characterId, int gearSlotId, Integer damage, Integer armor, Integer price,
-			CharacterDto character) {
+	public Gear(Integer characterId, int gearSlotId, Integer damage, Integer armor, Integer price,
+			Character character) {
 		this.characterId = characterId;
 		this.gearSlotId = gearSlotId;
 		this.damage = damage;
@@ -85,11 +85,11 @@ public class GearDto {
 		this.price = price;
 	}
 
-	public CharacterDto getCharacter() {
+	public Character getCharacter() {
 		return character;
 	}
 
-	public void setCharacter(CharacterDto character) {
+	public void setCharacter(Character character) {
 		this.character = character;
 	}
 }

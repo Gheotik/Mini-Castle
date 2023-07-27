@@ -1,11 +1,11 @@
-package miniCastle.dto;
+package miniCastle.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "base_class_stats_Dto")
+@Table(name = "base_class_stats")
 
-public class BaseClassStatsDto {
+public class BaseClassStats {
 	@Id
 	@Column(name = "class_id")
 	private Integer classId;
@@ -31,16 +31,15 @@ public class BaseClassStatsDto {
 	@Column(name = "image_path")
 	private String imagePath;
 
-	private PlayerDto player;
+	private Player player;
 
-	public BaseClassStatsDto() {
+	public BaseClassStats() {
 
 	}
 
-	public BaseClassStatsDto(Integer classId, String name, Integer baseHp, Integer baseArmor, Integer baseDamage,
+	public BaseClassStats(Integer classId, String name, Integer baseHp, Integer baseArmor, Integer baseDamage,
 			String skillName, String skillDescription, String imagePath) {
 		this.classId = classId;
-		this.name = name;
 		this.baseHp = baseHp;
 		this.baseArmor = baseArmor;
 		this.baseDamage = baseDamage;
